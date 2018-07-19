@@ -19,8 +19,22 @@ const AutoSuggestListItemWrapper = Styled.div`
   }
 `;
 
-const AutoSuggestName = Styled.span`
+const AutoSuggestName = Styled.div`
   padding: 5px 8px;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+
+  > img {
+    /* margin-right: auto; */
+    min-width: 32px;
+    min-height: 32px;
+  }
+  > span {
+    margin-left: 20px;
+    margin-right: auto;
+  }
 `;
 
 export {

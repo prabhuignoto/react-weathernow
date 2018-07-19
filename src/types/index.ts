@@ -39,6 +39,7 @@ export interface IAutoSuggestList {
 export interface IAutoSuggestListItem {
   displayName: string,
   value: string | ILocation;
+  code?: string;
   onSelect: (displayName: string, value: string | ILocation) => void;
 };
 

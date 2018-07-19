@@ -7,8 +7,8 @@ import {
   Button,
   Input,
   Label,
-} from '../styled-components/auto-suggest';
-import { Loader } from '../styled-components/loader';
+} from '../styles/auto-suggest';
+import { Loader } from '../styles/loader';
 import AutoSuggestList from './auto-suggest-list';
 
 const AutoSuggest: React.SFC<IAutoSuggest<IAutoSuggestListItem>> = ({

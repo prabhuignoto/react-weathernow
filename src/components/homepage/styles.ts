@@ -34,6 +34,7 @@ const WeatherWrapper = Styled.div`
   margin: 1rem;
   padding-top: 2.5rem;
   box-shadow: 0 0 10px 1px rgba(0,0,0,0.2);
+  /* background: linear-gradient(45deg, rgba(34,34,59,1) 0%, rgba(74,78,105,1) 59%, rgba(154,140,152,1) 100%); */
 }
 `;
 

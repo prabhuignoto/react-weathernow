@@ -27,7 +27,8 @@ const DetailWrapper = Styled.div`
   width: 100%;
   color: #fff;
   font-family: Montserrat, Arial, sans-serif;
-  font-size: 0.85em;
+  font-size: 0.95em;
+  font-weight: 500;
 `;
 
 const DetailName = Styled.div`
