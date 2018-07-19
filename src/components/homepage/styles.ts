@@ -24,13 +24,17 @@ const SearchBar = Styled.div`
   /* border: 1px solid red; */
 `;
 
-const DailyWeatherWrapper = Styled.div`
+const WeatherWrapper = Styled.div`
   width: 100%;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  min-height: 1080px;
+  background: rgba(255,255,255,0.1);
+  min-height: 100vh;
   margin: 1rem;
+  padding-top: 2.5rem;
+  box-shadow: 0 0 10px 1px rgba(0,0,0,0.2);
+}
 `;
 
 const ToggleWrapper = Styled.div`
@@ -45,12 +49,24 @@ const AutoSuggestWrapper = Styled.div`
   align-items: center;
   justify-content: center;
   /* width: 50%; */
-`
+`;
+
+const Credit = Styled.a`
+  font-size: 1.25em;
+  font-family: Montserrat, Arial, sans-serif;
+  color: #fff;
+  height: 50px;
+  &:hover {
+    text-decoration: underline;
+    color: #fff;
+  }
+`;
 
 export {
   HomePage,
   SearchBar,
-  DailyWeatherWrapper,
+  WeatherWrapper,
   ToggleWrapper,
   AutoSuggestWrapper,
+  Credit
 };

@@ -1,4 +1,5 @@
 import { Mode } from '../enums/mode';
+import { ICurrently } from '../models/data/ICurrently';
 import { IDaily } from '../models/data/IDaily';
 // import { IWeatherResponse } from '../models/data/IWeatherResponse';
 import {ILocation} from '../types';
@@ -73,6 +74,7 @@ export interface ILoadedForecast {
 export interface IWeatherForecaseRecvdAction {
   type: string;
   daily: IDaily;
+  currently: ICurrently;
   timezone: string;
 }
 

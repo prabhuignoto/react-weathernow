@@ -23,7 +23,7 @@ const DetailWrapper = Styled.div`
   align-items: center;
   justify-content: center;
   padding: 5px 5px 13px 5px;
-  height: 45px;
+  height: 55px;
   width: 100%;
   color: #fff;
   font-family: Montserrat, Arial, sans-serif;

@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
-import dailyForecast from './forecastReducer';
+import forecast from './forecastReducer';
 import suggestions from './suggestionsReducer';
 
 export default combineReducers({
-  dailyForecast,
+  forecast,
   suggestions,
 });

@@ -49,7 +49,7 @@ const Loader = () => {
   return (
     <LoaderWrapper>
       <LoaderIcon />
-      <LoaderText>Talking to the skies...</LoaderText>
+      <LoaderText>Talking to the skies ...</LoaderText>
     </LoaderWrapper>
   );
 };

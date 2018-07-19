@@ -20,7 +20,7 @@ const WeatherCard: React.SFC<IWeatherCard> = ({
     <Container>
       <Date {...date}/>
       <WeatherIcon  icon={icon} />
-      <Summary summary={summary}/>  
+      <Summary summary={summary}/>
       <Temperature highTemp={temperatureHigh} lowTemp={temperatureLow} />
       <WeatherDetails details={weatherDetails} />
     </Container>

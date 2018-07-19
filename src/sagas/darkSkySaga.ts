@@ -22,6 +22,7 @@ export function* watchGetWeatherForecast() {
     });
 
     yield put<IWeatherForecaseRecvdAction>({
+      currently: weatherResponse.weatherData.currently,
       daily: weatherResponse.weatherData.daily,
       timezone: weatherResponse.weatherData.timezone,
       type: Constants.WEATHER_FORECAST_RECIEVED,

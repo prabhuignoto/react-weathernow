@@ -8,9 +8,9 @@ import {
   getCitySuggestions,
   getWeatherForecast,
   selectCitySuggestion,
-} from '../../actions/creators';
-import AutoSuggest  from '../../components/auto-suggest/views/auto-suggest';
-import {IAutoSuggest, IAutoSuggestState, ICity, IDispatchProps, ILocation, IStateHandlers, ISuggestions } from '../../types';
+} from '../actions/creators';
+import AutoSuggest  from '../components/auto-suggest/views/auto-suggest';
+import {IAutoSuggest, IAutoSuggestState, ICity, IDispatchProps, ILocation, IStateHandlers, ISuggestions } from '../types';
 
 const mapStateToProps = ({ suggestions } : { suggestions: ISuggestions }) => {
   return {

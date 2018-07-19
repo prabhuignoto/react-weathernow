@@ -7,9 +7,9 @@ import {
   clearCountrySuggestions,
   getCountrySuggestions,
   selectCountrySuggestion,
-} from '../../actions/creators';
-import AutoSuggest  from '../../components/auto-suggest/views/auto-suggest';
-import { IAutoSuggest, IAutoSuggestState, ICountry, IDispatchProps, IStateHandlers, ISuggestions } from '../../types';
+} from '../actions/creators';
+import AutoSuggest  from '../components/auto-suggest/views/auto-suggest';
+import { IAutoSuggest, IAutoSuggestState, ICountry, IDispatchProps, IStateHandlers, ISuggestions } from '../types';
 
 const mapStateToProps = ({ suggestions } : { suggestions: ISuggestions }) => {
   return {

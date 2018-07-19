@@ -1,6 +1,7 @@
 import Styled from 'styled-components';
 import PartlyCloudyNight from '../assets/cloudy-night.svg';
 import Cloudy from '../assets/cloudy.svg';
+import Fog from '../assets/fog.svg';
 import PartlyCloudy from '../assets/partly-cloudy.svg';
 import Rainy from '../assets/rain.svg';
 import ClearDay from '../assets/sun.svg';
@@ -62,6 +63,14 @@ export const Icon = Styled.i`
   }
   &.rain {
     background: url(${Rainy});
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 50% 75%;
+    width: 85px;
+    height: 100%;
+  }
+  &.fog {
+    background: url(${Fog});
     background-repeat: no-repeat;
     background-size: contain;
     background-position: 50% 75%;

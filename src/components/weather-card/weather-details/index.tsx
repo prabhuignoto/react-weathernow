@@ -7,7 +7,7 @@ import {
   DetailValue,
   DetailWrapper,
   Icon
-} from './styled-components';
+} from './styles';
 
 const WeatherDetail: React.SFC<IWeatherDetail> = ( { displayName, name, value}) => (
     <DetailWrapper>

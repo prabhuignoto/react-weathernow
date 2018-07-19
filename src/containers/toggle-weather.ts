@@ -6,7 +6,7 @@ import ToggleSwitch from '../components/toggle-switch';
 import { Mode } from '../enums/mode';
 
 
-const initialState = ({ leftEnabled = true, rightEnabled = false, mode = Mode.daily_forecast }) => ({
+const initialState = ({ leftEnabled = false, rightEnabled = true, mode = Mode.daily_forecast }) => ({
   leftEnabled,
   mode,
   rightEnabled
@@ -28,11 +28,12 @@ interface IStateHandlers<T> extends StateHandlerMap<T> {
 
 const stateHandlers = {
   onToggle: ({ leftEnabled, rightEnabled }: IToggleState, { updateWeatherMode }: IDispatchProps) => () => {
-    const mode = !leftEnabled ? Mode.daily_forecast : Mode.current_weather;
+    const [uLeftEnabled, uRightEnabled] = [!leftEnabled, !rightEnabled];
+    const mode = uLeftEnabled ? Mode.current_weather : Mode.daily_forecast;
     updateWeatherMode(mode);
     return {
-      leftEnabled: !leftEnabled,
-      rightEnabled: !rightEnabled,
+      leftEnabled: uLeftEnabled,
+      rightEnabled: uRightEnabled,
     };
   }
 };

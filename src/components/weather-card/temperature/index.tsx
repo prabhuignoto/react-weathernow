@@ -10,15 +10,16 @@ const Temperature: React.SFC<ITemperature> = ({ highTemp, lowTemp}) => {
       <Temp>
         <HighTemp>
             <div>High: &nbsp;&nbsp;</div>
-            <div>{highTemp}</div>
+            <div>{highTemp ? `${highTemp}˚` : 'NA'}</div>
         </HighTemp>
         <LowTemp>
             <div>Low: &nbsp;&nbsp;</div>
-            <div>{lowTemp}</div>
+            <div>{lowTemp ? `${lowTemp}˚` : 'NA'}</div>
         </LowTemp>
       </Temp>
     </TemperatureWrapper>
   );
 };
 
-export default Temperature
+export default Temperature;
+

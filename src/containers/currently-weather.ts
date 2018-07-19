@@ -1,20 +1,23 @@
+import * as _ from 'lodash';
 import * as Moment from 'moment';
 import 'moment-timezone';
 import { connect } from 'react-redux';
 import DailyWeather from '../components/daily-weather';
 import { IWeatherCard, IWeatherDetail } from '../components/imports';
-import { IDaily } from '../models/data/IDaily';
+import { Mode } from '../enums/mode';
+import {ICurrently} from '../models/data/ICurrently';
 import { IMomentDate } from '../models/data/IMomentDate';
 
-interface IDailyForecast {
+interface ICurrentlyForecast {
   forecast: {
-    daily: IDaily,
+    currently: ICurrently,
+    loadingForecast: boolean,
+    mode: Mode,
     timezone: string,
-    loadingForecast: boolean;
   }
 }
 
-const mapStateToProps = ({forecast: {daily, timezone, loadingForecast}}: IDailyForecast) => {
+const mapStateToProps = ({forecast: {currently: cur, timezone, loadingForecast}}: ICurrentlyForecast) => {
   const getDate: (milliseconds: number) => IMomentDate = (milliseconds) => {
     const momentInstance = Moment.unix(milliseconds).tz(timezone);
     return {
@@ -25,28 +28,32 @@ const mapStateToProps = ({forecast: {daily, timezone, loadingForecast}}: IDailyF
       year: momentInstance.year(),
     }
   };
+  let weatherCardData: IWeatherCard[] = [];
 
-  const weatherCardData: IWeatherCard[] = daily.data.map<IWeatherCard>(item => ({
-    date: getDate(item.time),
-    icon: item.icon,
-    summary: item.summary,  
-    temperatureHigh: item.temperatureHigh,
-    temperatureLow: item.temperatureLow,
+  if(!_.isEmpty(cur)) {
+   weatherCardData= [{
+    date: getDate(cur.time),
+    icon: cur.icon,
+    summary: cur.summary,  
+    temperatureHigh: cur.temperatureHigh,
+    temperatureLow: cur.temperatureLow,
     weatherDetails: [
       'pressure',
       'visibility',
       'ozone',
       'humidity',
     ].map<IWeatherDetail>((x: string):IWeatherDetail => ({
-      displayName: x,
-      name: x,
-      value: item[x],
-    }))
-  }));
+        displayName: x,
+        name: x,
+        value: cur[x],
+      }))
+    }];
+  }
+
   return {
     data: weatherCardData,
     isForecastLoading: loadingForecast
   };
-};
+}
 
-export default connect(mapStateToProps, null)(DailyWeather);  
+export default connect(mapStateToProps, null)(DailyWeather);

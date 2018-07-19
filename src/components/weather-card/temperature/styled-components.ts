@@ -1,5 +1,5 @@
 import Styled from 'styled-components';
-import TempSvg from '../assets/temperature.svg';
+import TempSvg from '../assets/thermometer.svg';
 
 export const TemperatureWrapper = Styled.div`
   border: 1px solid transparent;
@@ -41,7 +41,7 @@ export const Temp = Styled.div`
 `;
 
 export const TempIcon = Styled.i`
-  height: 50%;
+  height: 65%;
   width: 20px;
   background: url(${TempSvg});
   background-repeat: no-repeat;

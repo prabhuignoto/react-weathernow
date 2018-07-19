@@ -2,7 +2,7 @@ import 'bulma/css/bulma.css';
 import * as React from 'react';
 import Styled from 'styled-components';
 import './App.css';
-import Home from './components/homepage/views/homepage';
+import Home from './containers/homepage';
 
 const AppWrapper = Styled.div`
   margin: 0 auto;

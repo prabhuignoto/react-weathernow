@@ -3,6 +3,7 @@ import Constants from '../actions/constants';
 import { Mode } from '../enums/mode';
 
 const defaultState = {
+  currently: {},
   daily: {
     data: [],
   },
@@ -15,9 +16,10 @@ export default function (state = defaultState, action: any) {
   switch (action.type) {
     case Constants.WEATHER_FORECAST_RECIEVED: {
       // const weatherResponse: IWeatherForecaseRecvdAction = action.weatherResponse as IWeatherForecaseRecvdAction;
-      const { daily, timezone } = action;
+      const { daily, currently, timezone } = action;
 
       return Object.assign({}, state, {
+        currently,
         daily,  
         timezone,
       });

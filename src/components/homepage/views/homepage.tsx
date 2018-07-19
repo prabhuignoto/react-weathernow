@@ -1,14 +1,18 @@
 import 'bulma/css/bulma.css';
 import * as React from 'react';
-import AutoSuggestCity from '../../../containers/auto-suggest/autosuggest-city';
-import AutoSuggestCountry from '../../../containers/auto-suggest/autosuggest-country';
+import AutoSuggestCity from '../../../containers/autosuggest-city';
+import AutoSuggestCountry from '../../../containers/autosuggest-country';
+import CurrentlyWeather from '../../../containers/currently-weather';
 import DailyWeather from '../../../containers/daily-weather';
 import ToggleWeather from '../../../containers/toggle-weather';
-import { AutoSuggestWrapper, DailyWeatherWrapper, HomePage, SearchBar, ToggleWrapper } from '../styles';
+import {Mode} from '../../../enums/mode';
+import IHome from '../../../models/view/IHome';
+import Loader from "../../loader-icon";
 
-export default () => (
+import { AutoSuggestWrapper, Credit, HomePage, SearchBar, ToggleWrapper, WeatherWrapper } from '../styles';
+
+const Home: React.SFC<IHome> = ({mode , isForecastLoading}) => (
   <HomePage>
-    
     <SearchBar className="columns is-multiline is-centered">
       <ToggleWrapper className="column is-quarter-desktop">
         <ToggleWeather />
@@ -20,8 +24,12 @@ export default () => (
       <div className="column is-quarter-desktop">React-Sky</div>
     </SearchBar>
 
-    <DailyWeatherWrapper>
-      <DailyWeather />
-    </DailyWeatherWrapper>
+    <WeatherWrapper>
+      { mode === Mode.daily_forecast ? <DailyWeather /> : <CurrentlyWeather />}
+    </WeatherWrapper>
+    { isForecastLoading ? <Loader /> : null }
+    <Credit href="https://darksky.net/poweredby/" target="_new">Powered by Dark Sky</Credit>
   </HomePage>
 );
+
+export default Home;
