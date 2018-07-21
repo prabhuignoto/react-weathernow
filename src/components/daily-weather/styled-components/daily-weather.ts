@@ -5,6 +5,7 @@ export default Styled.div`
   align-items: center;
   justify-content: space-between;
   width: 100% !important;
-  margin: 1rem;
+  margin: 0.5rem;
   height: 100%;
+  background: #1C1C31;
 `

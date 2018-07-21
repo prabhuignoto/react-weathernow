@@ -4,15 +4,15 @@ import TempSvg from '../assets/thermometer.svg';
 export const TemperatureWrapper = Styled.div`
   border: 1px solid transparent;
   width: 100%;
-  height: 65px;
+  height: 50px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
-  background: rgba(34, 34, 59, 0.75);
+  background: rgba(34, 34, 59, 0.5);
   color: #fff;
   font-family: Montserrat, arial, sans-serif;
-  font-size: 1.1em;
+  font-size: 0.85em;
   font-weight: 500;
 `;
 
@@ -41,7 +41,7 @@ export const Temp = Styled.div`
 `;
 
 export const TempIcon = Styled.i`
-  height: 65%;
+  height: 50%;
   width: 20px;
   background: url(${TempSvg});
   background-repeat: no-repeat;
@@ -49,5 +49,5 @@ export const TempIcon = Styled.i`
   background-position: 50%;
   display: block;
   flex: 1;
-  margin-right: 20px;
+  /* margin-right: 20px; */
 `

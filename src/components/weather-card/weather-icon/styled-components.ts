@@ -13,7 +13,8 @@ export const IconWrapper =  Styled.div`
   align-items: center;
   justify-content: center;
   height: 120px;
-  background: #22223B;
+  /* background: #22223B; */
+  background: transparent;
   /* padding-top: 20px; */
 `;
 

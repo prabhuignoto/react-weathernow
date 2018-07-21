@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import HomePage from '../components/homepage/views/homepage';
+import HomePage from '../components/homepage/homepage';
 import { Mode } from "../enums/mode";
 import { ICurrently } from "../models/data/ICurrently";
 

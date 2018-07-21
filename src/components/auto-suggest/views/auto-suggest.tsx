@@ -28,7 +28,7 @@ const AutoSuggest: React.SFC<IAutoSuggest<IAutoSuggestListItem>> = ({
       <AutoSuggestWrapper>
         {inputValue.length > 0 ? <Label>{label}</Label> : null}
         <Input type="text"
-          className="auto-suggest-input"
+          className={`auto-suggest-input ${inputValue.length > 0 ? 'label-visible' : ''}`}
           value={inputValue}
           onInput={onInput}
           placeholder={placeHolder}

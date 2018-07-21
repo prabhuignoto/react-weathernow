@@ -1,11 +1,11 @@
 import Styled from 'styled-components';
 
 export default Styled.div`
-  height: 55px;
-  line-height: 55px;
+  height: 40px;
+  line-height: 40px;
   width: 100%;
   text-align: center;
-  font-size: 1em;
+  font-size: 0.8rem;
   font-weight: 700;
   font-family: Montserrat, arial, sans-serif;
   /* background: #C9ADA7; */

@@ -2,7 +2,7 @@ import 'bulma/css/bulma.css';
 import * as React from 'react';
 import { IWeatherCard } from '../imports';
 import Date from './date';
-import { Container, Wrapper  } from './styled-components';
+import { Container, Wrapper  } from './styles';
 import Summary from './summary';
 import Temperature from './temperature';
 import WeatherDetails from "./weather-details";
@@ -16,7 +16,7 @@ const WeatherCard: React.SFC<IWeatherCard> = ({
   summary,
   weatherDetails
 }) => (
-  <Wrapper className="column is-half-tablet is-one-third-desktop is-one-third-widescreen is-one-quarter-fullhd">
+  <Wrapper className="column is-four-fifths-mobile is-half-tablet is-one-third-desktop is-one-quarter-widescreen">
     <Container>
       <Date {...date}/>
       <WeatherIcon  icon={icon} />

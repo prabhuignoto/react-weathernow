@@ -12,9 +12,9 @@ const DetailsWrapper = Styled.div`
   justify-content: center;
   flex-direction: column;
   margin-top: auto;
-  background: rgba(34, 34, 59, 0.5);
   border-bottom-right-radius: 4px;
   border-bottom-left-radius: 4px;
+  background: rgba(34, 34, 59, 0.3);
 `;
 
 const DetailWrapper = Styled.div`
@@ -23,12 +23,13 @@ const DetailWrapper = Styled.div`
   align-items: center;
   justify-content: center;
   padding: 5px 5px 13px 5px;
-  height: 55px;
+  height: 40px;
   width: 100%;
   color: #fff;
   font-family: Montserrat, Arial, sans-serif;
-  font-size: 0.95em;
+  font-size: 0.8em;
   font-weight: 500;
+  background: rgba(74, 78, 105, 0.25)
 `;
 
 const DetailName = Styled.div`

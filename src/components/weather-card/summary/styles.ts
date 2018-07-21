@@ -5,15 +5,16 @@ export default Styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100px;
+  height: 80px;
   text-align: center;
   color: #F2E9E4;
   width: 100%;
   padding: 5px 15px;
-  font-size: 1em;
+  font-size: 0.75rem;
   font-weight: 500;
-  font-family: 'Montserrat';
+  font-family: Montserrat, arial, sans-serif;
   margin-left: auto;
   margin-right: auto;
-  background: #22223B;
+  background: transparent;
+  /* background: #22223B; */
 `;

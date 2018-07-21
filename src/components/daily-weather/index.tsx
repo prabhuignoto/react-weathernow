@@ -7,7 +7,7 @@ import DailyWeatherWrapper from './styled-components/daily-weather';
 const DailyWeather:React.SFC<IDailyWeather>  = ({ data, isForecastLoading }) => {
   return (
     <DailyWeatherWrapper className='container is-fluid'>
-      <div className="columns is-centered is-multiline is-variable is-2" style={{width: '100%'}}>
+      <div className="columns is-centered is-multiline is-variable is-3" style={{width: '100%'}}>
         { data.map(item =>  <WeatherCard {...item} key={item.date.unixTimeStamp}/>)}
       </div>
     </DailyWeatherWrapper>

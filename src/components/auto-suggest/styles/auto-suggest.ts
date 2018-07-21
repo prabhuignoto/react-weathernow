@@ -14,29 +14,35 @@ const AutoSuggestWrapper = Styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  height: 50px;
+  height: 36px;
   width: 100%;
-  background: #22223B;
-  border-radius: 4px;
+  background: #C9ADA7;
+    box-shadow: inset 0 0 20px 2px #9A8C98;
+  border-radius: 2px;
 `;
 
 const Input = Styled.input`
   border: none;
-  font-size: 1.2em;
+  font-size: 0.8rem;
   width: 100%;
   padding: 5px 15px;
   height: 100%;
   color: #fff;
   outline: none;
   box-shadow: inset 0 0 10px 1px rgba(0,0,0,0.2);
-  background: #22223B;
-  border-radius: 4px;
+  /* background: #22223B; */
+  background: #000;
+  border-radius: 2px;
   text-transform: capitalize;
   font-family: Montserrat, arial, sans-serif;
   ::placeholder {
     color: rgba(255, 255, 255, 0.2);
   }
   text-align: left;
+  &.label-visible {
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+  }
 `;
 
 const Button = Styled.button`
@@ -45,8 +51,8 @@ const Button = Styled.button`
   background-repeat: no-repeat;
   background-position: 50%;
   background-size: contain;
-  width: 18px;
-  height: 18px;
+  width: 15px;
+  height: 15px;
   position: absolute;
   right: 10px;
   cursor: pointer;
@@ -55,7 +61,7 @@ const Button = Styled.button`
 
 const AutoSuggestListWrapper = Styled.div`
   position: absolute;
-  top: 56px;
+  top: 40px;
   left: 0px;
   width: 100%;
   z-index: 999;
@@ -63,9 +69,12 @@ const AutoSuggestListWrapper = Styled.div`
 
 const Label = Styled.label`
     margin: 1rem;
-    font-size: 1.2em;
-    color: rgba(255,255,255,0.5);
-    background: rgba(34,34,59,0.95);
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: rgba(0,0,0,1);
+    
+    background: transparent;
+    /* background: #4A4E69; */
     text-transform: uppercase;
     height: 30px;
     line-height: 30px;

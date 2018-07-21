@@ -5,10 +5,10 @@ export const Wrapper = Styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  background: transparent;
-  min-width: 300px;
-  width: 0;
-  height: 50px;
+  background: #000;
+  /* min-width: 220px; */
+  width: 100%;
+  height: 40px;
   border: 1px solid rgba(34, 34, 59, 0.5);
   border-radius: 4px;
   position: relative;
@@ -35,7 +35,7 @@ const Switch = StyledDiv`
   background: transparent;
   padding: 2px 2px;
   white-space: nowrap;
-  font-size: 0.9em;
+  font-size: 0.7rem;
   font-weight: 700;
   text-align: center;
 `;
@@ -55,26 +55,26 @@ export const RightSwitch = StyledTS<{rightEnabled: boolean}>(Switch.extend)`
 export const moveHighlightToLeft = keyframes`
   0% {
     right: 2%;
-    left: 48%;
+    left: 51%;
   }
   100% {
     left: 2%;
-    right: 48%;
+    right: 51%;
   }
 `;
 export const moveHighlightToRight = keyframes`
   100% {
     right: 2%;
-    left: 48%;
+    left: 51%;
   }
   0% {
     left: 2%;
-    right: 48%;
+    right: 51%;
   }
 `;
 
 export const Highlighter =  StyledDiv`
-  width: 50%;
+  width: 47%;
   height: 80%;
   display: block;
   position: absolute;
@@ -82,11 +82,10 @@ export const Highlighter =  StyledDiv`
   animation-duration: 500ms;
   animation-timing: linear;
   animation-name: ${p => p.leftEnabled ? moveHighlightToLeft : moveHighlightToRight};
-  left: ${p => p.leftEnabled ? '2%' : '48%'};
-  right: ${p => p.rightEnabled ? '2%' : '48%'};
+  left: ${p => p.leftEnabled ? '2%' : '51%'};
+  right: ${p => p.rightEnabled ? '2%' : '51%'};
   background: red;
   background: #C9ADA7;
   box-shadow: inset 0 0 20px 2px #9A8C98;
-  border-radius: 4px;
-`
-
+  border-radius: 2px;
+`;
