@@ -23,7 +23,7 @@ const AutoSuggest: React.SFC<IAutoSuggest<IAutoSuggestListItem>> = ({
   label
 }) => {
   return (
-    <AutoSuggestContainer>  
+    <AutoSuggestContainer className="column">  
       {isLoading ? <Loader /> : null}
       <AutoSuggestWrapper>
         {inputValue.length > 0 ? <Label>{label}</Label> : null}

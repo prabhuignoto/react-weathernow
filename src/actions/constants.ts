@@ -30,6 +30,9 @@ enum ActionTypes {
   LOADED_FORECAST = 'LOADED_FORECAST',
 
   UPDATE_MODE = 'UPDATE_MODE',
+
+  GET_HISTORY = 'GET_HISTORY',
+  HISTORY_LOADED = 'HISTORY_LOADED',
 };
 
 export default ActionTypes;

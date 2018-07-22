@@ -1,5 +1,4 @@
 import Constants from '../actions/constants';
-// import { IWeatherForecaseRecvdAction } from '../actions/creatorTypes';
 import { Mode } from '../enums/mode';
 
 const defaultState = {
@@ -7,6 +6,7 @@ const defaultState = {
   daily: {
     data: [],
   },
+  history: [],
   loadingForecast: false,
   mode: Mode.daily_forecast,
   timezone: '',
@@ -15,12 +15,12 @@ const defaultState = {
 export default function (state = defaultState, action: any) {
   switch (action.type) {
     case Constants.WEATHER_FORECAST_RECIEVED: {
-      // const weatherResponse: IWeatherForecaseRecvdAction = action.weatherResponse as IWeatherForecaseRecvdAction;
-      const { daily, currently, timezone } = action;
+      const { daily, currently, timezone, history } = action;
 
       return Object.assign({}, state, {
         currently,
         daily,  
+        history,
         timezone,
       });
     }
@@ -38,6 +38,11 @@ export default function (state = defaultState, action: any) {
       return Object.assign({}, state, {
         mode: action.mode
       })
+    }
+    case Constants.HISTORY_LOADED: {
+      return Object.assign({}, state, {
+        history: action.items
+      });
     }
     default:
       return state;

@@ -1,6 +1,7 @@
 import { Mode } from '../enums/mode';
 import { ICurrently } from '../models/data/ICurrently';
 import { IDaily } from '../models/data/IDaily';
+import { IHistory } from '../models/data/IHistory';
 // import { IWeatherResponse } from '../models/data/IWeatherResponse';
 import {ILocation} from '../types';
 import { IDBSuggestionCountry } from './creatorTypes';
@@ -60,6 +61,7 @@ export interface ISuggestionsLoaded {
 }
 
 export interface IGetWeatherForecastAction {
+  city: string;
   type: string;
   location: ILocation;
 }
@@ -76,9 +78,23 @@ export interface IWeatherForecaseRecvdAction {
   daily: IDaily;
   currently: ICurrently;
   timezone: string;
+  history: IHistory[];
+}
+export interface IWeatherForecastFailed {
+  type: string;
+  data: any
 }
 
 export interface IUpdateModeAction {
   type: string;
   mode: Mode;
+}
+
+export interface IHistoryLoaded {
+  type: string;
+  items: IHistory[]
+}
+
+export interface IGetHistoryAction {
+  type: string;
 }

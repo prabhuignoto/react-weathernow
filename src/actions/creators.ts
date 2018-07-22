@@ -4,6 +4,7 @@ import Constants from './constants';
 
 import {
   IClearSuggestions,
+  IGetHistoryAction,
   IGetSuggestions,
   IGetWeatherForecastAction,
   ISelectSuggestion,
@@ -39,7 +40,8 @@ const selectCountrySuggestion: (value: string) => ISelectSuggestion = (value) =>
     value,
 });
 
-const getWeatherForecast: (location: ILocation) => IGetWeatherForecastAction = (location) => ({
+const getWeatherForecast: (city:string, location: ILocation) => IGetWeatherForecastAction = (city, location) => ({
+  city, 
   location,
   type: Constants.GET_WEATHER_FORECAST,
 });
@@ -47,6 +49,10 @@ const getWeatherForecast: (location: ILocation) => IGetWeatherForecastAction = (
 const updateWeatherMode: (mode: Mode) => IUpdateModeAction = mode => ({
     mode,
     type: Constants.UPDATE_MODE
+});
+
+const getHistory: () => IGetHistoryAction = () => ({
+    type: Constants.GET_HISTORY
 });
 
 export {
@@ -57,5 +63,6 @@ export {
   getCitySuggestions,
   clearCitySuggestions,
   getWeatherForecast,
-  updateWeatherMode
+  updateWeatherMode,
+  getHistory
 };

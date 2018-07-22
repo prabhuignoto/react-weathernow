@@ -26,13 +26,13 @@ const mapStateToProps = ({ suggestions } : { suggestions: ISuggestions }) => {
 };
 
 interface IDispatchPropsCustom {
-  getForeCast(location: ILocation): void,
+  getForeCast(city: string, location: ILocation): void,
 }
 
 const mapDispatchToProps: (dispatch: Dispatch) => IDispatchProps & IDispatchPropsCustom = (dispatch) => {
   return {
     clearSuggestions: _.debounce(() => dispatch(clearCitySuggestions()), 50),
-    getForeCast: (location: ILocation) => dispatch(getWeatherForecast(location)),
+    getForeCast: (city: string, location: ILocation) => dispatch(getWeatherForecast(city, location)),
     getSuggestions: _.debounce((input: string, countryCode: string) => dispatch(getCitySuggestions(input, countryCode)), 150),
     selectSuggestion: (value: string | ILocation) => dispatch(selectCitySuggestion(value)),
   };
@@ -98,7 +98,7 @@ const stateHandlers = {
   (displayName: string, value: ILocation) => {
     if(value.lat && value.lng) {
       selectSuggestion(value);
-      getForeCast(value as ILocation);
+      getForeCast(displayName, value as ILocation);
       return {
         inputValue: displayName,
         selectedItem: value,

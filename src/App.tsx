@@ -14,7 +14,7 @@ const AppWrapper = Styled.div`
 class App extends React.Component {
   public render() {
     return (
-      <AppWrapper className="container is-fluid">
+      <AppWrapper className="container">
         <Home />
       </AppWrapper>
     );

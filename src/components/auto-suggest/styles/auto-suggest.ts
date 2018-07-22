@@ -6,7 +6,6 @@ const AutoSuggestContainer = Styled.div`
   flex-direction: column;
   position: relative;
   margin: 20px;
-  flex: 1;
 `;
 
 const AutoSuggestWrapper = Styled.div`
@@ -17,7 +16,8 @@ const AutoSuggestWrapper = Styled.div`
   height: 36px;
   width: 100%;
   background: #C9ADA7;
-    box-shadow: inset 0 0 20px 2px #9A8C98;
+  box-shadow: inset 0 0 20px 2px #9A8C98;
+  border: 1px solid #9A8C98;
   border-radius: 2px;
 `;
 
@@ -36,7 +36,7 @@ const Input = Styled.input`
   text-transform: capitalize;
   font-family: Montserrat, arial, sans-serif;
   ::placeholder {
-    color: rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.4);
   }
   text-align: left;
   &.label-visible {
@@ -54,16 +54,16 @@ const Button = Styled.button`
   width: 15px;
   height: 15px;
   position: absolute;
-  right: 10px;
+  right: 20px;
   cursor: pointer;
   outline: none;
 `;
 
 const AutoSuggestListWrapper = Styled.div`
   position: absolute;
-  top: 40px;
-  left: 0px;
-  width: 100%;
+  top: 50px;
+  left: 3%;
+  width: 94%;
   z-index: 999;
 `;
 

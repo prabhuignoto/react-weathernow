@@ -1,13 +1,13 @@
 import * as React from 'react';
 import { IAutoSuggestListItem } from '../../../types';
-import { AutoSuggestListItemWrapper, AutoSuggestName } from '../styles/autosuggest-list-item'
+import { AutoSuggestListItemWrapper, AutoSuggestName } from '../styles/autosuggest-list-item';
 
 const AutoSuggestListItem: React.SFC<IAutoSuggestListItem> = ({
-    value,
-    displayName,
-    onSelect,
-    code
-  }): React.ReactElement<any> => {
+  value,
+  displayName,
+  onSelect,
+  code
+}): React.ReactElement<any> => {
   const handleKeyUp: (event: React.KeyboardEvent) => void = function _handleKeyUp(event) {
     if (event.keyCode === 13) {
       onSelect(displayName, value);
@@ -28,7 +28,7 @@ const AutoSuggestListItem: React.SFC<IAutoSuggestListItem> = ({
         className="auto-suggest-name"
       >
         {
-          code ? <img src={`https://www.countryflags.io/${code!.toLowerCase()}/flat/32.png`} /> : null
+          code && code !== '0' ? <img src={`https://www.countryflags.io/${code!.toLowerCase()}/flat/32.png`} /> : null
         }
         <span>{displayName}</span>
       </AutoSuggestName>

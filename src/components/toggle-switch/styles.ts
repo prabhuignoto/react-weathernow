@@ -9,13 +9,14 @@ export const Wrapper = Styled.div`
   /* min-width: 220px; */
   width: 100%;
   height: 40px;
-  border: 1px solid rgba(34, 34, 59, 0.5);
-  border-radius: 4px;
+  /* border: 1px solid rgba(34, 34, 59, 0.5); */
+  border-radius: 2px;
   position: relative;
   cursor: pointer;
   font-family: Montserrat, arial, sans-serif;
   box-shadow: inset 0 0 10px 1px rgba(0,0,0,0.4);
   padding: 2px;
+  border: 1px solid #9A8C98;
 `;
 
 interface ISwitch {

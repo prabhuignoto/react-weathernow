@@ -7,6 +7,7 @@
     "@types/lodash": "^4.14.111",
     "@types/moment-timezone": "^0.5.6",
     "@types/redux": "^3.6.0",
+    "@types/storejs": "^2.0.2",
     "axios": "^0.18.0",
     "bulma": "^0.7.1",
     "cities.json": "^1.1.2",
@@ -23,6 +24,7 @@
     "redux-saga": "^0.16.0",
     "reselect": "^3.0.1",
     "source-map-explorer": "^1.5.0",
+    "store": "^2.0.12",
     "styled-components": "^3.3.3",
     "styled-components-ts": "^0.0.14",
     "uniqid": "^5.0.3"
