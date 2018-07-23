@@ -4,16 +4,20 @@ import AutoSuggestCity from '../../containers/autosuggest-city';
 import AutoSuggestCountry from '../../containers/autosuggest-country';
 import CurrentlyWeather from '../../containers/currently-weather';
 import DailyWeather from '../../containers/daily-weather';
+import GeoLocation from '../../containers/geolocation';
 import RecentlyViewed from "../../containers/recently-viewed";
 import ToggleWeather from '../../containers/toggle-weather';
 import {Mode} from '../../enums/mode';
 import IHome from '../../models/view/IHome';
 import Loader from "../loader-icon";
-
-import { AutoSuggestWrapper, Credit, HomePage, SearchBar, ToggleWrapper, WeatherWrapper } from './styles';
+import { Appheader, AppTitle, AutoSuggestWrapper, Credit, HomePage, SearchBar, ToggleWrapper, WeatherWrapper } from './styles';
 
 const Home: React.SFC<IHome> = ({mode , isForecastLoading}) => (
   <HomePage>
+    <Appheader className="columna">
+      <AppTitle>Weather Now</AppTitle>
+      <GeoLocation />
+    </Appheader>
     <SearchBar className="columns is-multiline is-centered">
       <ToggleWrapper className="column is-three-quarters-mobile is-one-fifth-desktop">
         <ToggleWeather />

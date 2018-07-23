@@ -5,7 +5,8 @@ const defaultState = {
   countries: [],
   loadingCitySuggestions: false,
   loadingCountrySuggestions: false,
-  selectedCity: '',
+  selectedCity: {
+  },
   selectedCountry: '',
 
 };

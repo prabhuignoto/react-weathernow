@@ -6,11 +6,10 @@ const HomePage = Styled.div`
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  /* background: #4A4E69; */
-  /* background: #fff; */
   align-items: center;
   justify-content: center;
   min-height: 100px;
+  margin-top: 15px;
 `;
 
 const SearchBar = Styled.div`
@@ -67,11 +66,29 @@ const Credit = Styled.a`
   }
 `;
 
+const Appheader = Styled.header`
+  display: flex;
+  width: 100%;
+  height: 70px;
+  align-items: center;
+  justify-content: flex-start;
+`;
+
+const AppTitle = Styled.div`
+  font-size: 1.5em;
+  font-family: Montserrat, Arial, sans-serif;
+  font-weight: 500;
+  color: #fff;
+  margin-left: 20px;
+`;
+
 export {
   HomePage,
   SearchBar,
   WeatherWrapper,
   ToggleWrapper,
   AutoSuggestWrapper,
-  Credit
+  Credit,
+  Appheader,
+  AppTitle
 };

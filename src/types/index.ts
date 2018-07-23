@@ -1,11 +1,12 @@
 import { StateHandler, StateHandlerMap } from 'recompose';
+import { IGeoLocation } from '../models/view/IGeoLocation';
 
 // =======|| TYPES FOR THE DATACONTAINERS ||========
 
 // React-Redux dispatch props
 export interface IDispatchProps {
   clearSuggestions: () => void;
-  selectSuggestion: (value: string | ILocation) => void;
+  selectSuggestion: (value: string | IGeoLocation) => void;
   getSuggestions(input: string, countryCode?: string): void;
 }
 

@@ -47,7 +47,7 @@ export function* watchGetWeatherForecast() {
         if(_.findIndex<IHistoryItem>(historyItems, {city: action.city}) > -1) {
           const idx = _.findIndex(historyItems, {city: action.city});
           historyItems[idx] = newHistory;
-        } else if(_.size(historyItems) > 10) {
+        } else if(_.size(historyItems) > 9) {
           historyItems.shift();
           historyItems.push(newHistory);
         } else {

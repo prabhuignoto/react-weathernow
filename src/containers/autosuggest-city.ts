@@ -10,6 +10,7 @@ import {
   selectCitySuggestion,
 } from '../actions/creators';
 import AutoSuggest  from '../components/auto-suggest/views/auto-suggest';
+import { IGeoLocation } from '../models/view/IGeoLocation';
 import {IAutoSuggest, IAutoSuggestState, ICity, IDispatchProps, ILocation, IStateHandlers, ISuggestions } from '../types';
 
 const mapStateToProps = ({ suggestions } : { suggestions: ISuggestions }) => {
@@ -26,7 +27,7 @@ const mapStateToProps = ({ suggestions } : { suggestions: ISuggestions }) => {
 };
 
 interface IDispatchPropsCustom {
-  getForeCast(city: string, location: ILocation): void,
+  getForeCast(city: string, location: ILocation): void;
 }
 
 const mapDispatchToProps: (dispatch: Dispatch) => IDispatchProps & IDispatchPropsCustom = (dispatch) => {
@@ -34,7 +35,7 @@ const mapDispatchToProps: (dispatch: Dispatch) => IDispatchProps & IDispatchProp
     clearSuggestions: _.debounce(() => dispatch(clearCitySuggestions()), 50),
     getForeCast: (city: string, location: ILocation) => dispatch(getWeatherForecast(city, location)),
     getSuggestions: _.debounce((input: string, countryCode: string) => dispatch(getCitySuggestions(input, countryCode)), 150),
-    selectSuggestion: (value: string | ILocation) => dispatch(selectCitySuggestion(value)),
+    selectSuggestion: (value: string | IGeoLocation) => dispatch(selectCitySuggestion(value)),
   };
 };
 
@@ -95,9 +96,11 @@ const stateHandlers = {
 
   // invokes an action on selection of a result item
   onSelect: (state: IAutoSuggestState<ICity>, { selectSuggestion, getForeCast }: IDispatchProps & IDispatchPropsCustom) => 
-  (displayName: string, value: ILocation) => {
+  (displayName: string, value: IGeoLocation) => {
     if(value.lat && value.lng) {
-      selectSuggestion(value);
+      selectSuggestion(Object.assign({}, {
+        city: displayName
+      }, value));
       getForeCast(displayName, value as ILocation);
       return {
         inputValue: displayName,

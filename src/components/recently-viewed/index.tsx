@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { IRecentItem, IRecentlyViewed} from '../../models/view/IRecentlyViewed'
 import { ILocation } from '../../types';
-import {Label, List, ListItemWrapper, Wrapper} from './styles';
+import {Icon, Label, List, ListItemWrapper, Wrapper} from './styles';
 
 const onSelectHandler = function _onSelectHandler(onSelect:(location:ILocation, name: string) => void, location: ILocation, name: string) {
   return function oSelectHandler(ev: React.MouseEvent<HTMLLIElement>) {
@@ -23,7 +23,8 @@ const ListItem: React.SFC<IRecentItem> = ({name, location, onSelect}) => (
 
 const RecentlyViewed: React.SFC<IRecentlyViewed> = ({ items, onSelect, toggleList, showList }) => {
   return (
-    <Wrapper onClick={onToggleHandler(toggleList)}>
+    <Wrapper onClick={onToggleHandler(toggleList)} className={`${items.length < 1 ? 'disabled' : ''}`}>
+      <Icon />
       <Label>Recently Viewed</Label>
      {showList ? <List>
         {items.map(m => <ListItem {...m} key={m.name} onSelect={onSelect} />)}
