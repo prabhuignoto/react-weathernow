@@ -3,7 +3,7 @@ import * as _ from 'lodash';
 import { put, takeEvery } from 'redux-saga/effects';
 import * as Store from 'store';
 import Constants from "../actions/constants";
-import { IGetWeatherForecastAction, IHistoryLoaded, ILoadedForecast, ILoadingForecast, IWeatherForecaseRecvdAction, IWeatherForecastFailed } from '../actions/creatorTypes';
+import { IGetWeatherForecastAction, IHistoryLoaded, ILoadedForecast, ILoadingForecast, IRecentItemsCleared, IWeatherForecaseRecvdAction, IWeatherForecastFailed } from '../actions/creatorTypes';
 import { IHistory } from "../models/data/IHistory";
 import { IWeatherResponse } from "../models/data/IWeatherResponse";
 
@@ -100,6 +100,17 @@ export function* watchGetHistory() {
     yield put<IHistoryLoaded>({
       items: vItems,
       type: Constants.HISTORY_LOADED,
+    });
+  });
+}
+
+export function* watchClearRecentItems() {
+  yield takeEvery(Constants.CLEAR_RECENTLY_VIEWED_ITEMS, function* clear() {
+    Store.set('react-darksky-app', {
+      history: []
+    });
+    yield put<IRecentItemsCleared>({
+      type: Constants.RECENT_ITEMS_CLEARED
     });
   });
 }

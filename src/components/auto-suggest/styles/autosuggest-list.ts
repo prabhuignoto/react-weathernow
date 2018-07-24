@@ -9,7 +9,8 @@ const AutoSuggestListWrapper = Styled.div`
   max-height: 500px;
   overflow-y: auto;
   overflow-x: hidden;
-  background: rgba(34, 34, 59, 1);
+  background: #000;
+  /* background: rgba(34, 34, 59, 1); */
   box-shadow: 0 0 10px 1px rgba(0,0,0,0.5);
 `;
 

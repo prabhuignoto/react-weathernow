@@ -5,7 +5,7 @@ const AutoSuggestContainer = Styled.div`
   display: flex;
   flex-direction: column;
   position: relative;
-  margin: 20px;
+  margin-right: 20px !important;
 `;
 
 const AutoSuggestWrapper = Styled.div`
@@ -13,7 +13,7 @@ const AutoSuggestWrapper = Styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  height: 36px;
+  height: 40px;
   width: 100%;
   background: #C9ADA7;
   box-shadow: inset 0 0 20px 2px #9A8C98;
@@ -61,9 +61,9 @@ const Button = Styled.button`
 
 const AutoSuggestListWrapper = Styled.div`
   position: absolute;
-  top: 50px;
-  left: 3%;
-  width: 94%;
+  top: 45px;
+  left: 0%;
+  width: 100%;
   z-index: 999;
 `;
 

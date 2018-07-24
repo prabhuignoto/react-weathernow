@@ -44,6 +44,11 @@ export default function (state = defaultState, action: any) {
         history: action.items
       });
     }
+    case Constants.RECENT_ITEMS_CLEARED: {
+      return Object.assign({}, state, {
+        history: []
+      });
+    }
     default:
       return state;
   }

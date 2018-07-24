@@ -3,11 +3,13 @@ import {ILocation} from '../types';
 import Constants from './constants';
 
 import {
+  IClearRecentlyViewedItems,
   IClearSuggestions,
   IGetHistoryAction,
   IGetSuggestions,
   IGetWeatherForecastAction,
   ISelectSuggestion,
+  IsetCurLocationAsDefault,
   IUpdateModeAction
 } from './creatorTypes';
 
@@ -55,6 +57,14 @@ const getHistory: () => IGetHistoryAction = () => ({
     type: Constants.GET_HISTORY
 });
 
+const clearRecentlyViewedItems: () => IClearRecentlyViewedItems = () => ({
+    type: Constants.CLEAR_RECENTLY_VIEWED_ITEMS
+});
+
+const setCurrentLocationAsDefault: () => IsetCurLocationAsDefault = () => ({
+    type: Constants.SET_CURRENT_LOCATION_AS_DEFAULT
+});
+
 export {
   selectCitySuggestion,
   selectCountrySuggestion,
@@ -64,5 +74,7 @@ export {
   clearCitySuggestions,
   getWeatherForecast,
   updateWeatherMode,
-  getHistory
+  getHistory,
+  clearRecentlyViewedItems,
+  setCurrentLocationAsDefault
 };

@@ -5,7 +5,7 @@ import {
   Anchor,
   City,
   Icon,
-  Location,
+  // Location,
   Text,
   Wrapper,
 } from './styles';
@@ -18,7 +18,7 @@ const GeoLocation: React.SFC<IGeoLocation> = ({city, lat, lng}) => {
           <Icon />
           <Text>
             <City>{city}</City>
-            <Location>{lat}, {lng}</Location>
+            {/* <Location>{lat}, {lng}</Location> */}
           </Text>
         </Anchor>
       </Fragment> : null}

@@ -98,3 +98,13 @@ export interface IHistoryLoaded {
 export interface IGetHistoryAction {
   type: string;
 }
+
+export interface IClearRecentlyViewedItems {
+  type: string;
+}
+export interface IsetCurLocationAsDefault {
+  type: string;
+}
+export interface IRecentItemsCleared {
+  type: string;
+}

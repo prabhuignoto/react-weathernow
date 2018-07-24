@@ -1,7 +1,8 @@
 import { all, fork } from 'redux-saga/effects';
  import {
+  watchClearRecentItems,
   watchGetHistory,
-  watchGetWeatherForecast,
+  watchGetWeatherForecast
  } from './darkSkySaga';
 import {
   watchClearCitySuggestions,
@@ -17,6 +18,7 @@ export default function* rootSaga() {
     fork(watchGetCitySuggestions),
     fork(watchClearCitySuggestions),
     fork(watchGetWeatherForecast),
-    fork(watchGetHistory)
+    fork(watchGetHistory),
+    fork(watchClearRecentItems),
   ]);
 }

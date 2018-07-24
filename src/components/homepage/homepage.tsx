@@ -6,30 +6,35 @@ import CurrentlyWeather from '../../containers/currently-weather';
 import DailyWeather from '../../containers/daily-weather';
 import GeoLocation from '../../containers/geolocation';
 import RecentlyViewed from "../../containers/recently-viewed";
+import Settings from '../../containers/settings';
 import ToggleWeather from '../../containers/toggle-weather';
 import {Mode} from '../../enums/mode';
 import IHome from '../../models/view/IHome';
 import Loader from "../loader-icon";
-import { Appheader, AppTitle, AutoSuggestWrapper, Credit, HomePage, SearchBar, ToggleWrapper, WeatherWrapper } from './styles';
+import { 
+  Appheader, AppIcon, AppTitle, AutoSuggestWrapper,
+  Credit, HomePage, SearchBar, ToggleWrapper, WeatherWrapper
+} from './styles';
 
 const Home: React.SFC<IHome> = ({mode , isForecastLoading}) => (
   <HomePage>
-    <Appheader className="columna">
-      <AppTitle>Weather Now</AppTitle>
+    <Appheader className="columns">
+      <AppTitle className="column"><AppIcon /> Weather Now</AppTitle>
       <GeoLocation />
     </Appheader>
     <SearchBar className="columns is-multiline is-centered">
       <ToggleWrapper className="column is-three-quarters-mobile is-one-fifth-desktop">
         <ToggleWeather />
       </ToggleWrapper>
-      <div className="column is-one-fifth-desktop">
-        <RecentlyViewed />
-      </div>
-      <div className="column is-four-fifths-mobile">
-        <AutoSuggestWrapper className="columns">
+      <div className="column is-four-fifths-mobile is-four-fifths-tablet is-half-desktop">
+        <AutoSuggestWrapper className="columns is-gapless">
           <AutoSuggestCountry />
           <AutoSuggestCity />
         </AutoSuggestWrapper>
+      </div>
+      <div className="column is-one-quarter-desktop" style={{marginLeft:'auto', display: 'flex'}}>
+        <RecentlyViewed />
+        <Settings />
       </div>
       {/* <div className="column is-four-fifths-mobile is-one-fifth-desktop">React-Sky</div> */}
     </SearchBar>

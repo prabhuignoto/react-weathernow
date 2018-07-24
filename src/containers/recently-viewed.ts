@@ -38,15 +38,28 @@ interface ILocalState {
 }
 
 interface IStateHandlers<T> extends StateHandlerMap<T> {
-  toggleList: StateHandler<T>;
+  showMenu: StateHandler<T>;
+  hideMenu: StateHandler<T>;
   onSelect: StateHandler<T>;
+  onRef: StateHandler<T>;
 }
 
 const initialState = ({ showList = false }: ILocalState) => ({
   showList,
 });
 
+let domNode: HTMLDivElement;
+
 const stateHandlers = {
+  hideMenu: ({showList}: {showList: boolean}) => () => {
+    return {
+      showList: false
+    }
+  },
+  onRef: () => (element: HTMLDivElement) => {
+    domNode = element;
+    return {};
+  },
   onSelect: (state:ILocalState, { getForecast, selectCity }: IDispatchProps) => (location: ILocation, name: string) => {
     selectCity({
       city: name,
@@ -54,11 +67,16 @@ const stateHandlers = {
       lng: location.lng
     })
     getForecast(location, name);
-    return {};
+    return {
+      showList: false
+    };
   },
-  toggleList: ({showList}: {showList: boolean}) => () => ({
-    showList: !showList
-  })
+  showMenu: ({showList}: {showList: boolean}) => () => {
+    domNode.focus();
+    return {
+      showList: true
+    }
+  }
 }
 
 export default compose(

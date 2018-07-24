@@ -8,7 +8,9 @@ export interface IRecentItem {
 
 export interface IRecentlyViewed {
   items: IRecentItem[];
-  toggleList: () => void;
+  showMenu: () => void;
+  hideMenu: () => void;
+  onRef: () => void;
   onSelect: (location:ILocation, name: string) => void;
   showList: boolean;
 }

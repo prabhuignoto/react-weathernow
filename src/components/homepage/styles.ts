@@ -1,4 +1,5 @@
 import Styled from 'styled-components';
+import AppLogo from './assets/umbrella.svg';
 
 const HomePage = Styled.div`
   display: flex;
@@ -7,8 +8,7 @@ const HomePage = Styled.div`
   margin-left: auto;
   margin-right: auto;
   align-items: center;
-  justify-content: center;
-  min-height: 100px;
+  min-height: 100vh;
   margin-top: 15px;
 `;
 
@@ -29,13 +29,14 @@ const SearchBar = Styled.div`
 const WeatherWrapper = Styled.div`
   width: 100%;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
   background: #1C1C31;
   /* background: rgba(255,255,255,0.1); */
-  min-height: 100vh;
-  margin: 0.2rem;
-  padding-top: 2.5rem;
+  min-height: 80vh;
+  margin-top: 0.1rem;
+  margin-bottom: 1rem;
+  padding-top: 1rem;
   /* box-shadow: 0 0 10px 1px rgba(0,0,0,0.2); */
   /* background: linear-gradient(45deg, rgba(34,34,59,1) 0%, rgba(74,78,105,1) 59%, rgba(154,140,152,1) 100%); */
 }
@@ -59,7 +60,7 @@ const Credit = Styled.a`
   font-size: 0.9em;
   font-family: Montserrat, Arial, sans-serif;
   color: #fff;
-  height: 50px;
+  height: 70px;
   &:hover {
     text-decoration: underline;
     color: #fff;
@@ -79,8 +80,22 @@ const AppTitle = Styled.div`
   font-family: Montserrat, Arial, sans-serif;
   font-weight: 500;
   color: #fff;
-  margin-left: 20px;
+  margin-left: 1px;
+  position: relative;
+  display: flex;
+  align-items: center;
 `;
+
+const AppIcon = Styled.i`
+  width: 40px;
+  height: 40px;
+  background: url(${AppLogo});
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: block;
+  margin-right: 10px;
+`
 
 export {
   HomePage,
@@ -90,5 +105,6 @@ export {
   AutoSuggestWrapper,
   Credit,
   Appheader,
-  AppTitle
+  AppTitle,
+  AppIcon
 };

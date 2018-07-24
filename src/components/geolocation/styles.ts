@@ -1,12 +1,12 @@
 import Styled from 'styled-components';
-import IconMarker from './compass.svg';
+import IconMarker from './map-marker-alt.svg';
 
 const Wrapper = Styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
   margin-left: auto;
-  margin-right: 4rem;
+  margin-right: 3rem;
 `;
 
 const Icon = Styled.i`
@@ -17,8 +17,8 @@ const Icon = Styled.i`
   background-size: contain;
   margin-right: auto;
   margin-left: 10px;
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
 `;
 
 const Text = Styled.span`
@@ -37,12 +37,14 @@ const City = Styled.div`
 `;
 
 const Location = Styled.div`
-  font-size: 1.25rem;
+  font-size: 1rem;
   margin-left: 10px;
 `;
 
 const Anchor = Styled.a`
   display: flex;
+  align-items: center;
+  justify-content: center;
   border: 1px solid transparent;
   &:hover {
     border: 1px dotted #F2E9E4;
