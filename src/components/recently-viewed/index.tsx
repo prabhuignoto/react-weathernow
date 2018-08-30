@@ -38,14 +38,13 @@ const RecentlyViewed: React.SFC<IRecentlyViewed> = ({ items, onSelect, showMenu,
       <Wrapper
         onClick={handler(showMenu)}
         className={`${items.length < 1 ? 'disabled' : ''}`}>
-        <Icon />
+        {/* <Icon /> */}
         <Label>Recently Viewed</Label>
-        {/* <CaretIcon className={showList ? 'up' : ''}/> */}
         <div 
           ref={onRef}
           tabIndex={0}
           onBlur={hideMenu}>
-          {showList ? <List className="recently-viewed-list">
+          {showList ? <List className="recently-viewed-list" pose="open" initialPose="close">
               {items.map(m => <ListItem {...m} key={m.name} onSelect={onSelect} />)}
             </List> : null}  
         </div>

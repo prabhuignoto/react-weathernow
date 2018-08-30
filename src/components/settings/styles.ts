@@ -1,7 +1,13 @@
 import Styled from 'styled-components';
-import CogIcon from './assets/cog.svg';
+import Posed from 'react-pose';
 
-const Wrapper = Styled.div`
+const PosedWrapper = Posed.div({
+  pressable: true,
+  init: { scale: 1 },
+  press: { scale: 0.95 }
+})
+
+const Wrapper = Styled(PosedWrapper)`
   align-items: center;
   cursor: pointer;
   display: flex;
@@ -16,7 +22,7 @@ const Wrapper = Styled.div`
   color: #22223B;
   font-family: Montserrat, arial, sans-serif;
   border-radius: 2px;
-  padding: 4px;
+  padding: 1rem;
   min-width: 100px;
   outline: none;
   user-select: none;
@@ -27,7 +33,6 @@ const Label = Styled.div`
 `;
 
 const Icon = Styled.i`
-  background: url(${CogIcon}) no-repeat 50%;
   background-size: contain;
   display: block;
   height: 20px;
@@ -46,7 +51,18 @@ const ListWrapper = Styled.div`
   outline: none;
 `;
 
-const List = Styled.ul`
+const PosedList = Posed.ul({
+  close: {
+    opacity: 0,
+    scale: 0,
+  },
+  open: {
+    opacity: 1,
+    scale: 1,
+  }
+})
+
+const List = Styled(PosedList)`
   background: #000;
   box-shadow: 0 0 10px 1px rgba(0,0,0,0.5);
   list-style: none;

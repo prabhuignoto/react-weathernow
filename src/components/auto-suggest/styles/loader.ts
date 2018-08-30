@@ -1,8 +1,7 @@
 import Styled from 'styled-components';
-import Image from '../assets/spinner-2.svg';
+// import Image from '../assets/spinner-2.svg';
 
 const Loader = Styled.div`
-  background: url(${Image});
   width: 28px;
   height: 28px;
   background-repeat: norepeat;

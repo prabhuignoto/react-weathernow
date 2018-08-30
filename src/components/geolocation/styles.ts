@@ -1,5 +1,4 @@
 import Styled from 'styled-components';
-import IconMarker from './map-marker-alt.svg';
 
 const Wrapper = Styled.div`
   display: flex;
@@ -11,14 +10,11 @@ const Wrapper = Styled.div`
 
 const Icon = Styled.i`
   display: block;
-  background: url(${IconMarker});
-  background-position: 50%;
-  background-repeat: no-repeat;
-  background-size: contain;
   margin-right: auto;
-  margin-left: 10px;
-  width: 20px;
-  height: 20px;
+  margin-left: 1rem;
+  width: 1rem;
+  height: 1rem;
+  position: relative;
 `;
 
 const Text = Styled.span`

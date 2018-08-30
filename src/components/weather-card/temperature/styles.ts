@@ -1,5 +1,4 @@
 import Styled from 'styled-components';
-import TempSvg from '../assets/thermometer.svg';
 
 export const TemperatureWrapper = Styled.div`
   border: 1px solid transparent;
@@ -20,6 +19,8 @@ export const HighTemp = Styled.div`
   border: 1px solid transparent;
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
   flex:2;
   height: 100%;
 `;
@@ -28,6 +29,8 @@ export const LowTemp = Styled.div`
   border: 1px solid transparent;
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
   flex:2;
   height: 100%;
 `;
@@ -36,18 +39,20 @@ export const Temp = Styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
   justify-content: space-around;
-  flex: 3;
+  width: 100%;
+`;
+
+export const TempVal = Styled.div`
+  font-size: 1.1rem;
+  font-weight: 500;
 `;
 
 export const TempIcon = Styled.i`
-  height: 50%;
-  width: 20px;
-  background: url(${TempSvg});
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: 50%;
-  display: block;
-  flex: 1;
-  /* margin-right: 20px; */
-`
+  height: 2rem;
+  width: 2rem;
+  position: relative;
+  margin: 0.25rem;
+  padding: 0.25rem;
+`;

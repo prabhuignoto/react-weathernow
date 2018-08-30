@@ -11,15 +11,20 @@ import ToggleWeather from '../../containers/toggle-weather';
 import {Mode} from '../../enums/mode';
 import IHome from '../../models/view/IHome';
 import Loader from "../loader-icon";
+import AppLogo from './assets/umbrella.svg';
 import { 
   Appheader, AppIcon, AppTitle, AutoSuggestWrapper,
   Credit, HomePage, SearchBar, ToggleWrapper, WeatherWrapper
 } from './styles';
+import { Footer } from '../footer/footer';
 
 const Home: React.SFC<IHome> = ({mode , isForecastLoading}) => (
   <HomePage>
     <Appheader className="columns">
-      <AppTitle className="column"><AppIcon /> Weather Now</AppTitle>
+      <AppTitle className="column">
+        <AppIcon><AppLogo/></AppIcon>
+        Weather Now
+      </AppTitle>
       <GeoLocation />
     </Appheader>
     <SearchBar className="columns is-multiline is-centered">
@@ -36,14 +41,13 @@ const Home: React.SFC<IHome> = ({mode , isForecastLoading}) => (
         <RecentlyViewed />
         <Settings />
       </div>
-      {/* <div className="column is-four-fifths-mobile is-one-fifth-desktop">React-Sky</div> */}
     </SearchBar>
 
     <WeatherWrapper className="columns is-centered is-multiline">
       { mode === Mode.daily_forecast ? <DailyWeather /> : <CurrentlyWeather />}
     </WeatherWrapper>
     { isForecastLoading ? <Loader /> : null }
-    <Credit href="https://darksky.net/poweredby/" target="_new">Powered by Dark Sky</Credit>
+    <Footer />
   </HomePage>
 );
 

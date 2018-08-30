@@ -1,7 +1,5 @@
+import Posed from 'react-pose';
 import Styled from 'styled-components';
-import CaretDown from './assets/caret-down.svg';
-import CaretUp from './assets/caret-up.svg';
-import HistoryIcon from './assets/history.svg';
 
 const Wrapper = Styled.div`
   display: flex;
@@ -9,7 +7,7 @@ const Wrapper = Styled.div`
   justify-content: center;
   position: relative;
   border: 1px solid #9A8C98;
-  padding: 4px;
+  padding: 1rem;
   border-radius: 2px;
   height: 38px;
   background: #C9ADA7;
@@ -31,11 +29,22 @@ const Wrapper = Styled.div`
     background: #d3d3d3;
     box-shadow: inset 0 0 20px 2px #939393;
     cursor: default;
-    color: rgba(0,0,0,0.5)
+    color: rgba(0,0,0,0.75)
   }
 `;
 
-const List = Styled.ul`
+const PosedList = Posed.ul({
+  close: {
+    opacity: 0,
+    scale: 0
+  },
+  open: {
+    opacity: 1,
+    scale: 1,
+  }
+});
+
+const List = Styled(PosedList)`
   list-style: none;
   margin: 0;
   padding: 0;
@@ -78,7 +87,6 @@ const Icon = Styled.i`
   height: 40px;
   margin-right: 4px;
   display: block;
-  background: url(${HistoryIcon});
   background-repeat: no-repeat;
   background-size: 70%;
   background-position: 50%;
@@ -88,13 +96,11 @@ const CaretIcon = Styled.i`
   margin-left: 4px;
   width: 20px;
   height: 20px;
-  background: url(${CaretDown});
   background-repeat: no-repeat;
   background-size: 70%;
   background-position: 50%;
 
   &.up {
-  background: url(${CaretUp});
   background-repeat: no-repeat;
   background-size: 70%;
   background-position: 50%;

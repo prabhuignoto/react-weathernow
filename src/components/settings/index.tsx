@@ -52,10 +52,10 @@ function handler(show: () => void) {
 const Settings: React.SFC<ISettings> = ({ clearRecentItems, setAsDefault, showMenu, show, onRef, hideMenu}) => {
   return (
     <Wrapper onClick={handler(showMenu)}>
-      <Icon />
+      {/* <Icon /> */}
       <Label>Settings</Label>
       <ListWrapper tabIndex={0} onBlur={hideMenu} innerRef={onRef}>
-        {show ? <List className="settings-list">
+        {show ? <List className="settings-list" pose="open" initialPose="close">
           <ListItemWrapper onSelect={clearRecentItems} name="crItems" label="Clear recent items"/>
           <ListItemWrapper onSelect={setAsDefault} name="sDefault" label="Set as Default"/>
         </List> : null}

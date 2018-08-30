@@ -16,7 +16,7 @@ const WeatherCard: React.SFC<IWeatherCard> = ({
   summary,
   weatherDetails
 }) => (
-  <Wrapper className="column is-four-fifths-mobile is-half-tablet is-one-third-desktop is-one-quarter-widescreen">
+  <Wrapper className="column is-four-fifths-mobile is-half-tablet is-one-third-desktop is-one-quarter-widescreen" pose="enter" initialPose="exit">
     <Container>
       <Date {...date}/>
       <WeatherIcon  icon={icon} />

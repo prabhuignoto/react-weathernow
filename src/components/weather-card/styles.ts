@@ -1,10 +1,16 @@
 import Styled from 'styled-components';
+import Posed from 'react-pose';
 
-export const Wrapper = Styled.div`
-  /* display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;*/
+const PosedWrapper = Posed.div({
+  enter: {
+    opacity: 1,
+  },
+  exit: {
+    opacity: 0,
+  }
+})
+
+export const Wrapper = Styled(PosedWrapper)`
   margin-bottom: 10px; 
 `;
 

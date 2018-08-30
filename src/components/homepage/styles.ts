@@ -1,5 +1,4 @@
 import Styled from 'styled-components';
-import AppLogo from './assets/umbrella.svg';
 
 const HomePage = Styled.div`
   display: flex;
@@ -19,10 +18,7 @@ const SearchBar = Styled.div`
   justify-content: center;
   width: 100%;
   flex-wrap: wrap;
-  /* height: 100px; */
   margin-bottom: auto;
-  margin-right: auto;
-  /* border: 1px solid red; */
   padding: 2px 15px;
 `;
 
@@ -32,14 +28,10 @@ const WeatherWrapper = Styled.div`
   align-items: center;
   justify-content: center;
   background: #1C1C31;
-  /* background: rgba(255,255,255,0.1); */
   min-height: 80vh;
   margin-top: 0.1rem;
   margin-bottom: 1rem;
   padding-top: 1rem;
-  /* box-shadow: 0 0 10px 1px rgba(0,0,0,0.2); */
-  /* background: linear-gradient(45deg, rgba(34,34,59,1) 0%, rgba(74,78,105,1) 59%, rgba(154,140,152,1) 100%); */
-}
 `;
 
 const ToggleWrapper = Styled.div`
@@ -87,14 +79,11 @@ const AppTitle = Styled.div`
 `;
 
 const AppIcon = Styled.i`
-  width: 40px;
-  height: 40px;
-  background: url(${AppLogo});
-  background-position: 50%;
-  background-repeat: no-repeat;
-  background-size: contain;
-  display: block;
-  margin-right: 10px;
+  width: 3rem;
+  height: 3rem;
+  margin: 1rem;
+  padding: 0.5rem;
+  position: relative;
 `
 
 export {

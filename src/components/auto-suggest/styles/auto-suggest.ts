@@ -1,5 +1,5 @@
 import Styled from 'styled-components';
-import closeButton from '../assets/cross-out.svg';
+// import closeButton from '../assets/cross-out.svg';
 
 const AutoSuggestContainer = Styled.div`
   display: flex;
@@ -47,7 +47,6 @@ const Input = Styled.input`
 
 const Button = Styled.button`
   border: none;
-  background: url(${closeButton});
   background-repeat: no-repeat;
   background-position: 50%;
   background-size: contain;

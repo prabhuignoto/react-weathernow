@@ -1,8 +1,4 @@
 import Styled from 'styled-components';
-import Humidity from '../assets/humidity.svg';
-import OzoneImg from '../assets/ozone.svg';
-import PressureImg from '../assets/pressure.svg';
-import VisibilityImg from '../assets/visibility.svg';
 
 const DetailsWrapper = Styled.div`
   border: 1px solid transparent;
@@ -22,8 +18,8 @@ const DetailWrapper = Styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  padding: 5px 5px 13px 5px;
-  height: 40px;
+  padding: 0.5rem 0.25rem;
+  /* height: 40px; */
   width: 100%;
   color: #fff;
   font-family: Montserrat, Arial, sans-serif;
@@ -46,33 +42,12 @@ const DetailValue = Styled.div`
 
 const Icon = Styled.i`
   display: block;
-  height: 75%;
+  height: 1.5rem;
+  width: 1.5rem;
   flex: 1;
-  &.pressure {
-    background: url(${PressureImg});
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: 50%;
-  }
-  &.visibility {
-    background: url(${VisibilityImg});
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: 50%;
-  }
-  &.ozone {
-    background: url(${OzoneImg});
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: 50%;
-  }
-  &.humidity {
-    background: url(${Humidity});
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: 50%;
-  }
-
+  position: relative;
+  padding: 0.25rem;
+  margin: 0.25rem;
 `
 
 export {
