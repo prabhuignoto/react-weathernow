@@ -1,16 +1,16 @@
-import {
-  Wrapper,
-  Social,
-  Credit,
-  Copyright,
-  SocialLink,
-  Design,
-  HeartWrapper
-} from "./styles";
 import * as React from "react";
 import Github from "./assets/github-brands.svg";
-import Twitter from "./assets/twitter-brands.svg";
 import HeartSVG from "./assets/heart-solid.svg";
+import Twitter from "./assets/twitter-brands.svg";
+import {
+  Copyright,
+  Credit,
+  Design,
+  HeartWrapper,
+  Social,
+  SocialLink,
+  Wrapper
+} from "./styles";
 
 export const Footer = () => (
   <Wrapper>
@@ -30,6 +30,6 @@ export const Footer = () => (
     <Credit>
       Powered by <a href="http://newsapi.org">News API</a>
     </Credit>
-    <Copyright>2018 Copyrights Reserved</Copyright>
+    <Copyright>2018 &copy; Copyrights Reserved</Copyright>
   </Wrapper>
 );

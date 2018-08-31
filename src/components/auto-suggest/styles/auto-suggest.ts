@@ -1,5 +1,4 @@
 import Styled from 'styled-components';
-// import closeButton from '../assets/cross-out.svg';
 
 const AutoSuggestContainer = Styled.div`
   display: flex;
@@ -34,7 +33,7 @@ const Input = Styled.input`
   background: #000;
   border-radius: 2px;
   text-transform: capitalize;
-  font-family: Montserrat, arial, sans-serif;
+  font-family: Open Sans, arial, sans-serif;
   ::placeholder {
     color: rgba(255, 255, 255, 0.4);
   }
@@ -77,7 +76,7 @@ const Label = Styled.label`
     text-transform: uppercase;
     height: 30px;
     line-height: 30px;
-    font-family: Montserrat, arial, sans-serif;
+    font-family: Open Sans, arial, sans-serif;
 `
 export {
   AutoSuggestWrapper,

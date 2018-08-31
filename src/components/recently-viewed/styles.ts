@@ -19,7 +19,7 @@ const Wrapper = Styled.div`
   margin-right: auto;
   cursor: pointer;
   font-size: 0.8rem;
-  font-family: Montserrat, arial, sans-serif;
+  font-family: Open Sans, arial, sans-serif;
   font-weight: 500;
   outline: none;
   user-select: none;

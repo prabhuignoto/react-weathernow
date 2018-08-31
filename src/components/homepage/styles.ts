@@ -50,7 +50,7 @@ const AutoSuggestWrapper = Styled.div`
 
 const Credit = Styled.a`
   font-size: 0.9em;
-  font-family: Montserrat, Arial, sans-serif;
+  font-family: Open Sans, Arial, sans-serif;
   color: #fff;
   height: 70px;
   &:hover {
@@ -69,7 +69,7 @@ const Appheader = Styled.header`
 
 const AppTitle = Styled.div`
   font-size: 1.5em;
-  font-family: Montserrat, Arial, sans-serif;
+  font-family: Open Sans, Arial, sans-serif;
   font-weight: 500;
   color: #fff;
   margin-left: 1px;

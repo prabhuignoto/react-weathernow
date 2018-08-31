@@ -11,7 +11,7 @@ export default Styled.div`
   padding: 5px 15px;
   font-size: 0.75rem;
   font-weight: 500;
-  font-family: Montserrat, arial, sans-serif;
+  font-family: Open Sans, arial, sans-serif;
   margin: 0.5rem 0;
   margin-left: auto;
   margin-right: auto;

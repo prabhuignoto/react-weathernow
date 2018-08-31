@@ -7,7 +7,7 @@ const AutoSuggestListItemWrapper = Styled.div`
   width: 100%;
   text-transform: capitalize;
   color: #fff;
-  font-family: Montserrat, arial, sans-serif;
+  font-family: Open Sans, arial, sans-serif;
   font-size: 0.8rem;
   justify-content: center;
   outline: none;

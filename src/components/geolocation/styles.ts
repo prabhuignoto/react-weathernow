@@ -21,7 +21,7 @@ const Text = Styled.span`
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: Montserrat, arial, sans-serif;
+  font-family: Open Sans, arial, sans-serif;
   margin-left: 10px;
   color: #F2E9E4;
 `;

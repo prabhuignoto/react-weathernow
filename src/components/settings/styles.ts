@@ -1,17 +1,17 @@
-import Styled from 'styled-components';
 import Posed from 'react-pose';
+import Styled from 'styled-components';
 
 const PosedWrapper = Posed.div({
-  pressable: true,
   init: { scale: 1 },
-  press: { scale: 0.95 }
+  press: { scale: 0.95 },
+  pressable: true,
 })
 
 const Wrapper = Styled(PosedWrapper)`
   align-items: center;
   cursor: pointer;
   display: flex;
-  font-family: Montserrat, Arial, sans-serif;
+  font-family: Open Sans, Arial, sans-serif;
   font-size: 0.8rem;
   height: 40px;
   justify-content: center;
@@ -20,7 +20,7 @@ const Wrapper = Styled(PosedWrapper)`
   background: #C9ADA7;
   box-shadow: inset 0 0 20px 2px #9A8C98;
   color: #22223B;
-  font-family: Montserrat, arial, sans-serif;
+  font-family: Open Sans, arial, sans-serif;
   border-radius: 2px;
   padding: 1rem;
   min-width: 100px;
@@ -73,7 +73,7 @@ const List = Styled(PosedList)`
 
 const ListItem = Styled.li`
   color: #fff;
-  font-family: Montserrat, arial, sans-serif;
+  font-family: Open Sans, arial, sans-serif;
   font-size: 0.8rem;
   width: 100%;
   white-space: nowrap;

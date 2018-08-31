@@ -10,7 +10,7 @@ export const TemperatureWrapper = Styled.div`
   justify-content: space-around;
   background: rgba(34, 34, 59, 0.5);
   color: #fff;
-  font-family: Montserrat, arial, sans-serif;
+  font-family: Open Sans, arial, sans-serif;
   font-size: 0.85em;
   font-weight: 500;
 `;

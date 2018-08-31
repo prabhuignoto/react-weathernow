@@ -1,5 +1,4 @@
-import Styled, { keyframes, StyledFunction } from 'styled-components';
-import StyledTS from 'styled-components-ts';
+import Styled, { keyframes } from 'styled-components';
 
 export const Wrapper = Styled.div`
   display: flex;
@@ -13,20 +12,13 @@ export const Wrapper = Styled.div`
   border-radius: 2px;
   position: relative;
   cursor: pointer;
-  font-family: Montserrat, arial, sans-serif;
+  font-family: Open Sans, arial, sans-serif;
   box-shadow: inset 0 0 10px 1px rgba(0,0,0,0.4);
   padding: 2px;
   border: 1px solid #9A8C98;
 `;
 
-interface ISwitch {
-  leftEnabled: boolean;
-  rightEnabled: boolean;
-};
-
-const StyledDiv: StyledFunction<ISwitch & React.HTMLProps<HTMLDivElement>> = Styled.div;
-
-const Switch = StyledDiv`
+const Switch = Styled.div`
   flex: 1;
   height: 100%;
   display: flex;
@@ -41,13 +33,13 @@ const Switch = StyledDiv`
   text-align: center;
 `;
 
-export const LeftSwitch = StyledTS<{leftEnabled: boolean}>(Switch.extend)`
+export const LeftSwitch = Styled(Switch)<{leftEnabled: boolean}>`
   left: 0;
   color: ${p => p.leftEnabled ? '#22223B' : 'rgba(255,255,255,0.45)'};
   font-weight: ${p => p.leftEnabled ? '700' : 'normal'}
 `;
 
-export const RightSwitch = StyledTS<{rightEnabled: boolean}>(Switch.extend)`
+export const RightSwitch = Styled(Switch)<{rightEnabled: boolean}>`
   right: 0;
   color: ${p => p.rightEnabled ? '#22223B' : 'rgba(255,255,255,0.45)'};
   font-weight: ${p => p.rightEnabled ? '700' : 'normal'}
@@ -74,7 +66,7 @@ export const moveHighlightToRight = keyframes`
   }
 `;
 
-export const Highlighter =  StyledDiv`
+export const Highlighter =  Styled.div<{leftEnabled: boolean, rightEnabled: boolean}>`
   width: 47%;
   height: 80%;
   display: block;

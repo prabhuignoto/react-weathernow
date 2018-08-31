@@ -1,7 +1,6 @@
 import *  as React from 'react';
 
 import {
-  Icon,
   Label,
   List,
   ListItem,

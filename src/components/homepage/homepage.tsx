@@ -10,13 +10,13 @@ import Settings from '../../containers/settings';
 import ToggleWeather from '../../containers/toggle-weather';
 import {Mode} from '../../enums/mode';
 import IHome from '../../models/view/IHome';
+import { Footer } from '../footer/footer';
 import Loader from "../loader-icon";
 import AppLogo from './assets/umbrella.svg';
 import { 
   Appheader, AppIcon, AppTitle, AutoSuggestWrapper,
-  Credit, HomePage, SearchBar, ToggleWrapper, WeatherWrapper
+  HomePage, SearchBar, ToggleWrapper, WeatherWrapper
 } from './styles';
-import { Footer } from '../footer/footer';
 
 const Home: React.SFC<IHome> = ({mode , isForecastLoading}) => (
   <HomePage>

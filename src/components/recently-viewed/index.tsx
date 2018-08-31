@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Fragment } from "react";
 import { IRecentItem, IRecentlyViewed} from '../../models/view/IRecentlyViewed'
 import { ILocation } from '../../types';
-import {Icon, Label, List, ListItemWrapper, Wrapper} from './styles';
+import { Label, List, ListItemWrapper, Wrapper} from './styles';
 
 const onSelectHandler = function _onSelectHandler(onSelect:(location:ILocation, name: string) => void, location: ILocation, name: string) {
   return function oSelectHandler(ev: React.MouseEvent<HTMLLIElement>) {

@@ -1,7 +1,7 @@
 import 'bulma/css/bulma.css';
 import * as React from 'react'
 import { ITemperature } from '../../imports';
-import { HighTemp, LowTemp, Temp, TemperatureWrapper, TempIcon, TempVal } from './styles';
+import { HighTemp, LowTemp, Temp, TemperatureWrapper, TempVal } from './styles';
 // import TempSvg from '../assets/thermometer.svg';
 
 const Temperature: React.SFC<ITemperature> = ({ highTemp, lowTemp}) => {
