@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { IAutoSuggest, IAutoSuggestListItem, } from '../../../types';
+import Cross from '../assets/cross-out.svg';
 import {
   AutoSuggestContainer,
   AutoSuggestListWrapper,
@@ -33,7 +34,7 @@ const AutoSuggest: React.SFC<IAutoSuggest<IAutoSuggestListItem>> = ({
           onInput={onInput}
           placeholder={placeHolder}
         />
-        {inputValue.length > 0 ? <Button className="auto-suggest-clear" onClick={onClear} /> : null}
+        {inputValue.length > 0 ? <Button className="auto-suggest-clear" onClick={onClear}><Cross /></Button> : null}
       </AutoSuggestWrapper>
       {showSuggestions ?
         <AutoSuggestListWrapper>

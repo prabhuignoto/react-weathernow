@@ -46,11 +46,12 @@ const Input = Styled.input`
 
 const Button = Styled.button`
   border: none;
+  background: none;
   background-repeat: no-repeat;
   background-position: 50%;
   background-size: contain;
-  width: 15px;
-  height: 15px;
+  width: 1rem;
+  height: 1rem;
   position: absolute;
   right: 20px;
   cursor: pointer;
