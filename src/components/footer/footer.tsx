@@ -15,10 +15,10 @@ import {
 export const Footer = () => (
   <Wrapper>
     <Social>
-      <SocialLink>
+      <SocialLink href="https://github.com/prabhuignoto/react-dark-weather" target="new">
         <Github />
       </SocialLink>
-      <SocialLink>
+      <SocialLink href="https://twitter.com/prabhumurthy2" target="new">
         <Twitter />
       </SocialLink>
     </Social>
