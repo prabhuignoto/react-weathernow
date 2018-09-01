@@ -1,6 +1,10 @@
 import 'bulma/css/bulma.css';
 import * as React from 'react';
 import { IWeatherDetail, IWeatherDetails } from "../../imports";
+import Humidity from '../assets/humidity.svg';
+import OzoneImg from '../assets/ozone.svg';
+import PressureImg from '../assets/pressure.svg';
+import VisibilityImg from '../assets/visibility.svg';
 import {
   DetailName,
   DetailsWrapper,
@@ -8,10 +12,6 @@ import {
   DetailWrapper,
   Icon
 } from './styles';
-import Humidity from '../assets/humidity.svg';
-import OzoneImg from '../assets/ozone.svg';
-import PressureImg from '../assets/pressure.svg';
-import VisibilityImg from '../assets/visibility.svg';
 
 const WeatherDetail: React.SFC<IWeatherDetail> = ( { displayName, name, value}) => (
     <DetailWrapper>

@@ -8,4 +8,9 @@ export interface IWeatherCard {
   icon: string;
   summary: string;
   weatherDetails: IWeatherDetail[];
+  scientificData?: IWeatherDetail[];
+  showSciData?: () => void;
+  sciDataOpen?: boolean;
+  hideSciData?: () => void;
+  temperature: number;
 }

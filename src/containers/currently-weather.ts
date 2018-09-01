@@ -34,7 +34,23 @@ const mapStateToProps = ({forecast: {currently: cur, timezone, loadingForecast}}
    weatherCardData= [{
     date: getDate(cur.time),
     icon: cur.icon,
+    scientificData: [
+      ["Moon Phase", "moonPhase"],
+      ["UV Index","uvIndex"],
+      ["Ozone", "ozone"],
+      ["Cloud Cover", "cloudCover"],
+      ["Wind Speed", "windSpeed"],
+      ["Wind Gust", "windGust"]
+    ].map<IWeatherDetail>(
+      (x: string[]): IWeatherDetail => ({
+        displayName: x[0],
+        name: x[1],
+        value: x[1] === 'sunriseTime' || x[1] === 'sunsetTime' ? 
+        Moment.unix(cur[x[1]]).tz(timezone).format("hh:mm A") : cur[x[1]]
+      })
+    ),
     summary: cur.summary,  
+    temperature: cur.temperature,
     temperatureHigh: cur.temperatureHigh,
     temperatureLow: cur.temperatureLow,
     weatherDetails: [

@@ -1,5 +1,7 @@
 import {IWeatherDetail} from './IWeatherDetail';
 
 export interface IWeatherDetails {
-  details: IWeatherDetail[];
+  details?: IWeatherDetail[];
+  onClose?: () => void;
+  open?: boolean;
 };

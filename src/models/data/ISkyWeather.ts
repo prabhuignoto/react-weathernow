@@ -9,4 +9,16 @@ export default interface ISkyWeather {
   visibility: number,
   ozone: number,
   humidity: number,
+  temperature: number;
+  apparentTemperature: number;
+  apparentTemperatureLow: number;
+  apparentTemperatureHigh: number;
+  sunriseTime: number;
+  sunsetTime: number;
+  uvIndex: number;
+  windGust: number;
+  windBearing: number;
+  moonPhase: number;
+  cloudCover: number;
+  dewPoint: number;
 }

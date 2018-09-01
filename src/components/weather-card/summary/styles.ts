@@ -9,7 +9,7 @@ export default Styled.div`
   color: #F2E9E4;
   width: 100%;
   padding: 5px 15px;
-  font-size: 0.75rem;
+  font-size: 0.9rem;
   font-weight: 500;
   font-family: Open Sans, arial, sans-serif;
   margin: 0.5rem 0;

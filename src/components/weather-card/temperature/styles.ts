@@ -35,6 +35,12 @@ export const LowTemp = Styled.div`
   height: 100%;
 `;
 
+export const TempCurrent = Styled.div`
+  height: 100%;
+  flex: 1;
+  width: 100%;
+`;
+
 export const Temp = Styled.div`
   display: flex;
   flex-direction: row;
@@ -42,11 +48,13 @@ export const Temp = Styled.div`
   justify-content: center;
   justify-content: space-around;
   width: 100%;
+  color: rgba(201,173,167,1)
 `;
 
 export const TempVal = Styled.div`
   font-size: 1.1rem;
   font-weight: 500;
+  text-align: center;
 `;
 
 export const TempIcon = Styled.i`
