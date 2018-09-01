@@ -20,26 +20,39 @@ import {
 
 const Home: React.SFC<IHome> = ({mode , isForecastLoading}) => (
   <HomePage>
-    <Appheader className="columns">
-      <AppTitle className="column">
-        <AppIcon><AppLogo/></AppIcon>
-        Weather Now
-      </AppTitle>
-      <GeoLocation />
-    </Appheader>
-    <SearchBar className="columns is-multiline is-centered">
-      <ToggleWrapper className="column is-three-quarters-mobile is-one-fifth-desktop">
-        <ToggleWeather />
-      </ToggleWrapper>
-      <div className="column is-four-fifths-mobile is-four-fifths-tablet is-half-desktop">
-        <AutoSuggestWrapper className="columns is-gapless">
-          <AutoSuggestCountry />
-          <AutoSuggestCity />
-        </AutoSuggestWrapper>
+    <Appheader className="columns is-multiline">
+      <div className="column">
+        <AppTitle>
+          <AppIcon><AppLogo/></AppIcon>
+          Weather Now
+        </AppTitle>
       </div>
-      <div className="column is-one-quarter-desktop" style={{marginLeft:'auto', display: 'flex'}}>
-        <RecentlyViewed />
-        <Settings />
+      <div className="column is-3-desktop is-12-mobile">
+        <div className="columns is-multiline is-gapless">
+          <div className="column is-6-mobile">
+            <RecentlyViewed />
+          </div>
+          <div className="column is-6-mobile">
+            <Settings />
+          </div>
+        </div>
+      </div>
+    </Appheader>
+    <SearchBar className="columns is-multiline">
+      <div className="column is-4-desktop is-6-tablet is-11-mobile">
+        <ToggleWrapper>
+          <ToggleWeather />
+        </ToggleWrapper>
+      </div>
+      <div className="column is-12-tablet is-8-desktop">
+        <AutoSuggestWrapper className="columns is-multiline is-gapless">
+          <div className="column is-12-mobile">
+            <AutoSuggestCountry />
+          </div>
+          <div className="column is-12-mobile">
+            <AutoSuggestCity />
+          </div>
+        </AutoSuggestWrapper>
       </div>
     </SearchBar>
 

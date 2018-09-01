@@ -38,7 +38,6 @@ const ToggleWrapper = Styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  /* width: 30%; */
 `;
 
 const AutoSuggestWrapper = Styled.div`
@@ -52,7 +51,6 @@ const Credit = Styled.a`
   font-size: 0.9em;
   font-family: Open Sans, Arial, sans-serif;
   color: #fff;
-  height: 70px;
   &:hover {
     text-decoration: underline;
     color: #fff;
@@ -62,7 +60,6 @@ const Credit = Styled.a`
 const Appheader = Styled.header`
   display: flex;
   width: 100%;
-  height: 70px;
   align-items: center;
   justify-content: flex-start;
 `;

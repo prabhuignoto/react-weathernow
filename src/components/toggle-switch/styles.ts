@@ -5,10 +5,8 @@ export const Wrapper = Styled.div`
   align-items: center;
   justify-content: center;
   background: #000;
-  /* min-width: 220px; */
   width: 100%;
-  height: 40px;
-  /* border: 1px solid rgba(34, 34, 59, 0.5); */
+  height: 3.25rem;
   border-radius: 2px;
   position: relative;
   cursor: pointer;
@@ -28,7 +26,7 @@ const Switch = Styled.div`
   background: transparent;
   padding: 2px 2px;
   white-space: nowrap;
-  font-size: 0.7rem;
+  font-size: 1rem;
   font-weight: 700;
   text-align: center;
 `;

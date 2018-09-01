@@ -12,5 +12,5 @@ export interface IWeatherCard {
   showSciData?: () => void;
   sciDataOpen?: boolean;
   hideSciData?: () => void;
-  temperature: number;
+  temperature?: number;
 }

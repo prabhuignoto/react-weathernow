@@ -6,30 +6,24 @@ const Wrapper = Styled.div`
   align-items: center;
   justify-content: center;
   position: relative;
-  border: 1px solid #9A8C98;
   padding: 1rem;
   border-radius: 2px;
-  height: 38px;
-  background: #C9ADA7;
-  box-shadow: inset 0 0 20px 2px #9A8C98;
-  color: #22223B;
-  max-width: 160px;
+  color: #fff;
   white-space: nowrap;
   margin-left: auto;
   margin-right: auto;
   cursor: pointer;
-  font-size: 0.8rem;
+  font-size: 1rem;
   font-family: Open Sans, arial, sans-serif;
   font-weight: 500;
   outline: none;
   user-select: none;
+  height: 100%;
 
   &.disabled {
     pointer-events: none;
-    background: #d3d3d3;
-    box-shadow: inset 0 0 20px 2px #939393;
     cursor: default;
-    color: rgba(0,0,0,0.75)
+    color: rgba(255,255,255,0.25)
   }
 `;
 
@@ -56,7 +50,6 @@ const List = Styled(PosedList)`
   margin-left: auto;
   margin-right: auto;
   z-index: 100;
-  box-shadow: 0 0 10px 1px rgba(0,0,0,0.5);
   border: 1px solid rgba(154, 140, 152, 0.7);
   border-radius: 2px;
 `;
@@ -74,7 +67,6 @@ const ListItemWrapper = Styled.li`
   cursor: pointer;
   &:hover {
       background-color: #9A8C98;
-      /* color: #22223B; */
   }
 `;
 

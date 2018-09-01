@@ -27,7 +27,7 @@ const AutoSuggest: React.SFC<IAutoSuggest<IAutoSuggestListItem>> = ({
     <AutoSuggestContainer className="column">  
       {isLoading ? <Loader /> : null}
       <AutoSuggestWrapper>
-        {inputValue.length > 0 ? <Label>{label}</Label> : null}
+        {inputValue.length > 0 ? <Label className="is-hidden-mobile ">{label}</Label> : null}
         <Input type="text"
           className={`auto-suggest-input ${inputValue.length > 0 ? 'label-visible' : ''}`}
           value={inputValue}

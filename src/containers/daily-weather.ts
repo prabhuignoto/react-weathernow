@@ -36,12 +36,15 @@ const mapStateToProps = ({
       scientificData: [
         ["Sunrise", "sunriseTime"],
         ["Sunset", "sunsetTime"],
+        ["Apparent Temp High", "apparentTemperatureHigh"],
+        ["Apparent Temp Low", "apparentTemperatureLow"],
         ["Moon Phase", "moonPhase"],
         ["UV Index","uvIndex"],
         ["Ozone", "ozone"],
         ["Cloud Cover", "cloudCover"],
         ["Wind Speed", "windSpeed"],
-        ["Wind Gust", "windGust"]
+        ["Wind Gust", "windGust"],
+        ["Wind Bearing", "windBearing"],
       ].map<IWeatherDetail>(
         (x: string[]): IWeatherDetail => ({
           displayName: x[0],

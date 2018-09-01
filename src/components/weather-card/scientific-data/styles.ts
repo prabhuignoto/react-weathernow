@@ -46,16 +46,17 @@ export const ListItem = Styled.li`
   display: flex;
   align-items: center;
   justify-content: center;
-  border-bottom: 1px solid rgba(201,173,167,0.25);
+  border-bottom: 1px solid rgba(201,173,167,0.2);
 `;
 
 export const Cell = Styled.span<{type: string}>`
   display: block;
   width: 50%;
   text-align: ${p => p.type === 'name' ? 'left': 'center'};
-  font-size: ${p =>p.type === 'name' ? '0.95rem' : '0.95rem'};
+  font-size: ${p =>p.type === 'name' ? '0.9rem' : '0.9rem'};
   font-weight: ${p => p.type === 'name' ? '500': ''};
   color: rgba(201,173,167,1);
+  white-space: nowrap;
 `;
 
 export const CloseButtonWrapper = Styled.div`

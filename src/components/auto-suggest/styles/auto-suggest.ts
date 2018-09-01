@@ -4,7 +4,6 @@ const AutoSuggestContainer = Styled.div`
   display: flex;
   flex-direction: column;
   position: relative;
-  margin-right: 20px !important;
 `;
 
 const AutoSuggestWrapper = Styled.div`
@@ -12,7 +11,7 @@ const AutoSuggestWrapper = Styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  height: 40px;
+  height: 3.25rem;
   width: 100%;
   background: #C9ADA7;
   box-shadow: inset 0 0 20px 2px #9A8C98;
@@ -53,14 +52,14 @@ const Button = Styled.button`
   width: 1rem;
   height: 1rem;
   position: absolute;
-  right: 20px;
+  right: 2rem;
   cursor: pointer;
   outline: none;
 `;
 
 const AutoSuggestListWrapper = Styled.div`
   position: absolute;
-  top: 45px;
+  top: 4.5rem;
   left: 0%;
   width: 100%;
   z-index: 999;
@@ -68,7 +67,7 @@ const AutoSuggestListWrapper = Styled.div`
 
 const Label = Styled.label`
     margin: 1rem;
-    font-size: 0.7rem;
+    font-size: 0.9rem;
     font-weight: 700;
     color: rgba(0,0,0,1);
     
