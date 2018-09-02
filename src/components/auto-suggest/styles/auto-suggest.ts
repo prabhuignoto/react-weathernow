@@ -28,8 +28,7 @@ const Input = Styled.input`
   color: #fff;
   outline: none;
   box-shadow: inset 0 0 10px 1px rgba(0,0,0,0.2);
-  /* background: #22223B; */
-  background: #000;
+  background: rgb(28, 28, 49);
   border-radius: 2px;
   text-transform: capitalize;
   font-family: M PLUS Rounded 1c, arial, sans-serif;
@@ -72,7 +71,6 @@ const Label = Styled.label`
     color: rgba(0,0,0,1);
     
     background: transparent;
-    /* background: #4A4E69; */
     text-transform: uppercase;
     height: 30px;
     line-height: 30px;

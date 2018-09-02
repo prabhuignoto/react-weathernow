@@ -19,7 +19,7 @@ const AutoSuggestListWrapper = Styled(PosedWrapper)`
   max-height: 80vh;
   overflow-y: auto;
   overflow-x: hidden;
-  background: #000;
+  background: rgb(28, 28, 49);
   /* background: rgba(34, 34, 59, 1); */
   box-shadow: 0 0 10px 1px rgba(0,0,0,0.5);
   border-radius: 3px;

@@ -8,7 +8,7 @@ const AutoSuggestListItemWrapper = Styled.div`
   text-transform: capitalize;
   color: #fff;
   font-family: M PLUS Rounded 1c, arial, sans-serif;
-  font-size: 0.8rem;
+  font-size: 1rem;
   justify-content: center;
   outline: none;
   cursor: pointer;
@@ -20,7 +20,6 @@ const AutoSuggestListItemWrapper = Styled.div`
 `;
 
 const AutoSuggestName = Styled.div`
-  /* padding: 5px 8px; */
   display: flex;
   width: 100%;
   align-items: center;
