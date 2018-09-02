@@ -21,7 +21,7 @@ const AutoSuggestWrapper = Styled.div`
 
 const Input = Styled.input`
   border: none;
-  font-size: 0.8rem;
+  font-size: 1rem;
   width: 100%;
   padding: 5px 15px;
   height: 100%;

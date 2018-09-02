@@ -73,6 +73,7 @@ const AppTitle = Styled.div`
   position: relative;
   display: flex;
   align-items: center;
+  align-self: flex-start;
 `;
 
 const AppIcon = Styled.i`

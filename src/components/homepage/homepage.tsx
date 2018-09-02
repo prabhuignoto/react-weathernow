@@ -29,7 +29,7 @@ const Home: React.SFC<IHome> = ({ mode, isForecastLoading }) => (
   <HomePage>
     <Appheader className="columns is-multiline">
       <div className="column is-12-mobile is-4-desktop is-4-tablet">
-        <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+        <div style={{display: 'flex', alignItems: 'center', justifyContent: 'flex-start'}}>
           <AppTitle>
             <AppIcon className="is-hidden-mobile">
               <AppLogo />
