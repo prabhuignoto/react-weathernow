@@ -69,7 +69,7 @@ const AppTitle = Styled.div`
   font-family: Open Sans, Arial, sans-serif;
   font-weight: 500;
   color: #fff;
-  margin-left: 1rem;
+  margin-left: 0.25rem;
   position: relative;
   display: flex;
   align-items: center;

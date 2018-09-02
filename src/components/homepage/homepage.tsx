@@ -59,10 +59,10 @@ const Home: React.SFC<IHome> = ({ mode, isForecastLoading }) => (
       </div>
       <div className="column is-12-tablet is-8-desktop">
         <AutoSuggestWrapper className="columns is-multiline is-gapless">
-          <div className="column is-12-mobile">
+          <div className="column is-6-mobile">
             <AutoSuggestCountry />
           </div>
-          <div className="column is-12-mobile">
+          <div className="column is-6-mobile">
             <AutoSuggestCity />
           </div>
         </AutoSuggestWrapper>
