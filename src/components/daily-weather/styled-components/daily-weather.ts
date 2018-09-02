@@ -7,5 +7,5 @@ export default Styled.div`
   width: 100% !important;
   margin: 0.5rem;
   height: 100%;
-  background: #1C1C31;
+  /* background: #1C1C31; */
 `

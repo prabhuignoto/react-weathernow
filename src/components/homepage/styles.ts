@@ -27,7 +27,7 @@ const WeatherWrapper = Styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #1C1C31;
+  /* background: #1C1C31; */
   min-height: 80vh;
   margin-top: 0.1rem;
   margin-bottom: 1rem;

@@ -42,7 +42,7 @@ const Home: React.SFC<IHome> = ({ mode, isForecastLoading }) => (
         </div>
       </div>
       <div className="column is-hidden-mobile is-5-desktop"/>
-      <div className="column is-3-desktop is-4-tablet is-12-mobile">
+      <div className="column is-3-desktop is-12-tablet is-12-mobile">
         <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
           <div style={{flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
             <RecentlyViewed />
