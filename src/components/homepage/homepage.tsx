@@ -52,12 +52,12 @@ const Home: React.SFC<IHome> = ({ mode, isForecastLoading }) => (
       </div>
     </Appheader>
     <SearchBar className="columns is-multiline">
-      <div className="column is-4-desktop is-6-tablet is-11-mobile">
+      <div className="column is-4-desktop is-4-tablet is-11-mobile">
         <ToggleWrapper>
           <ToggleWeather />
         </ToggleWrapper>
       </div>
-      <div className="column is-12-tablet is-8-desktop">
+      <div className="column is-8-tablet is-8-desktop">
         <AutoSuggestWrapper className="columns is-multiline is-gapless">
 
          <div className="column is-12-mobile is-6-tablet">

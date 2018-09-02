@@ -70,10 +70,10 @@ const List = Styled(PosedList)`
 const ListItem = Styled.li`
   color: #fff;
   font-family: M PLUS Rounded 1c, arial, sans-serif;
-  font-size: 0.8rem;
+  font-size: 1rem;
   width: 100%;
   white-space: nowrap;
-  padding: 4px 12px;
+  padding: 1rem;
   display: flex;
   align-items: center;
   line-height: 38px;

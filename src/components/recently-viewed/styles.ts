@@ -61,8 +61,7 @@ const List = Styled(PosedList)`
 const ListItemWrapper = Styled.li`
   width: 100%;
   color: #fff;
-  /* height: 35px; */
-  padding: 3px 8px;
+  padding: 1rem;
   text-transform: capitalize;
   display: flex;
   align-items: center;
