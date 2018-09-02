@@ -5,7 +5,7 @@ export const IconWrapper = Styled.div`
   position: relative;
   height: 1.25rem;
   width: 1.25rem;
-  margin-right: 0.25rem;
+  margin-right: 0.5rem;
 `;
 
 const Wrapper = Styled.div`

@@ -52,8 +52,8 @@ export const Temp = Styled.div`
 `;
 
 export const TempVal = Styled.div`
-  font-size: 1rem;
-  font-weight: 500;
+  font-size: 1.1rem;
+  font-weight: 700;
   text-align: center;
 `;
 
