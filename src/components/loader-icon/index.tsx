@@ -15,10 +15,9 @@ const LoaderWrapper = Styled.div`
   left: -25%;
   margin-left: auto;
   margin-right: auto;
-  background: rgba(34, 34, 59, 0.9);
+  background: rgba(0, 0, 0, 0.8);
   border-radius: 4px;
   z-index: 100;
-  /* height: 100%; */
 `;
 
 const LoaderIcon = Styled.i`
