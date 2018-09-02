@@ -22,7 +22,7 @@ const DetailWrapper = Styled.div`
   /* height: 40px; */
   width: 100%;
   color: #fff;
-  font-family: Open Sans, Arial, sans-serif;
+  font-family: M PLUS Rounded 1c, Arial, sans-serif;
   font-size: 0.8em;
   font-weight: 500;
   background: rgba(74, 78, 105, 0.25)

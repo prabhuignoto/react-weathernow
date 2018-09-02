@@ -28,7 +28,7 @@ export const Footer = () => (
       </HeartWrapper>
     </Design>
     <Credit>
-      Powered by <a href="http://newsapi.org">News API</a>
+      Powered by <a href="https://darksky.net/dev">DarkSky API</a>
     </Credit>
     <Copyright>2018 &copy; Copyrights Reserved</Copyright>
   </Wrapper>

@@ -10,7 +10,7 @@ export const Wrapper = Styled.div`
   border-radius: 2px;
   position: relative;
   cursor: pointer;
-  font-family: Open Sans, arial, sans-serif;
+  font-family: M PLUS Rounded 1c, arial, sans-serif;
   box-shadow: inset 0 0 10px 1px rgba(0,0,0,0.4);
   padding: 2px;
   border: 1px solid #9A8C98;

@@ -7,7 +7,7 @@ export default Styled.div`
   text-align: center;
   font-size: 0.8rem;
   font-weight: 700;
-  font-family: Open Sans, arial, sans-serif;
+  font-family: M PLUS Rounded 1c, arial, sans-serif;
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
   color: #22223B;

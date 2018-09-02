@@ -10,12 +10,12 @@ export const IconWrapper = Styled.div`
 
 const Wrapper = Styled.div`
   cursor: pointer;
-  font-family: Open Sans, Arial, sans-serif;
+  font-family: M PLUS Rounded 1c, Arial, sans-serif;
   font-size: 1rem;
   justify-content: center;
   position: relative;
   color: rgba(201,173,167,1);
-  font-family: Open Sans, arial, sans-serif;
+  font-family: M PLUS Rounded 1c, arial, sans-serif;
   padding: 1rem;
   outline: none;
   user-select: none;
@@ -69,7 +69,7 @@ const List = Styled(PosedList)`
 
 const ListItem = Styled.li`
   color: #fff;
-  font-family: Open Sans, arial, sans-serif;
+  font-family: M PLUS Rounded 1c, arial, sans-serif;
   font-size: 0.8rem;
   width: 100%;
   white-space: nowrap;

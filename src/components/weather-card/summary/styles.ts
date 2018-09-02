@@ -9,9 +9,9 @@ export default Styled.div`
   color: #F2E9E4;
   width: 100%;
   padding: 1rem 1rem;
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: 500;
-  font-family: Open Sans, arial, sans-serif;
+  font-family: M PLUS Rounded 1c, arial, sans-serif;
   margin: 0.5rem 0;
   margin-left: auto;
   margin-right: auto;

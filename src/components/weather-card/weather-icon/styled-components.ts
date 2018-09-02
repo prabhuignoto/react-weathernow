@@ -7,14 +7,14 @@ export const IconWrapper =  Styled.div`
   justify-content: center;
   background: transparent;
   width: 100%;
-  margin: 1.25rem 0;
+  margin: 1rem 0;
 `;
 
 export const Icon = Styled.i`
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 6rem;
+  width: 7rem;
   position: relative;
-  height: 6rem;
+  height: 7rem;
 `;

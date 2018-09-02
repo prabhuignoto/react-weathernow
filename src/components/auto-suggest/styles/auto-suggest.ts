@@ -32,7 +32,7 @@ const Input = Styled.input`
   background: #000;
   border-radius: 2px;
   text-transform: capitalize;
-  font-family: Open Sans, arial, sans-serif;
+  font-family: M PLUS Rounded 1c, arial, sans-serif;
   ::placeholder {
     color: rgba(255, 255, 255, 0.4);
   }
@@ -76,7 +76,7 @@ const Label = Styled.label`
     text-transform: uppercase;
     height: 30px;
     line-height: 30px;
-    font-family: Open Sans, arial, sans-serif;
+    font-family: M PLUS Rounded 1c, arial, sans-serif;
 `
 export {
   AutoSuggestWrapper,

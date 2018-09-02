@@ -16,7 +16,7 @@ const Wrapper = Styled.div`
   white-space: nowrap;
   cursor: pointer;
   font-size: 1rem;
-  font-family: Open Sans, arial, sans-serif;
+  font-family: M PLUS Rounded 1c, arial, sans-serif;
   font-weight: 500;
   outline: none;
   user-select: none;
@@ -61,7 +61,7 @@ const List = Styled(PosedList)`
 const ListItemWrapper = Styled.li`
   width: 100%;
   color: #fff;
-  height: 35px;
+  /* height: 35px; */
   padding: 3px 8px;
   text-transform: capitalize;
   display: flex;
