@@ -4,11 +4,9 @@ import Styled from 'styled-components';
 const PosedList= Posed.ul({
   close: {
     opacity: 0,
-    top: '100%',
   },
   open: {
     opacity: 1,
-    top: '0%',
   },
 })
 
