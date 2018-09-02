@@ -26,7 +26,7 @@ export const Container = Styled.div`
 `;
 
 export const ShowSciDetailsWrapper = Styled.div`
-  height: 2rem;
+  height: 2.5rem;
   padding: 0.25rem;
   display: flex;
   align-items: center;
