@@ -9,7 +9,7 @@ const AutoSuggestList: React.SFC<IAutoSuggestList> = ({
   onSelect
 }): React.ReactElement<any> => {
   return (
-    <AutoSuggestListWrapper>
+    <AutoSuggestListWrapper pose="open" close="close">
       {
         items.map((x: IAutoSuggestListItem) => {
           return <AutoSuggestListItem

@@ -12,6 +12,7 @@ const AutoSuggestListItemWrapper = Styled.div`
   justify-content: center;
   outline: none;
   cursor: pointer;
+  padding: 1rem;
   &:hover {
     background: rgba(154, 140, 152, 0.45);
     color: #fff;
@@ -19,7 +20,7 @@ const AutoSuggestListItemWrapper = Styled.div`
 `;
 
 const AutoSuggestName = Styled.div`
-  padding: 5px 8px;
+  /* padding: 5px 8px; */
   display: flex;
   width: 100%;
   align-items: center;
