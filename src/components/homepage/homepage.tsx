@@ -28,7 +28,7 @@ import {
 const Home: React.SFC<IHome> = ({ mode, isForecastLoading }) => (
   <HomePage>
     <Appheader className="columns is-multiline">
-      <div className="column is-12-mobile is-4-desktop">
+      <div className="column is-12-mobile is-4-desktop is-4-tablet">
         <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
           <AppTitle>
             <AppIcon className="is-hidden-mobile">
@@ -39,7 +39,7 @@ const Home: React.SFC<IHome> = ({ mode, isForecastLoading }) => (
           <Geolocation />
         </div>
       </div>
-      <div className="column is-hidden-touch is-5-desktop"/>
+      <div className="column is-hidden-mobile is-5-desktop"/>
       <div className="column is-3-desktop is-4-tablet is-12-mobile">
         <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
           <div style={{flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
