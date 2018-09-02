@@ -19,7 +19,7 @@ const WeatherIcon: React.SFC<IWeatherIcon> = ({ icon }) => {
           {icon === 'wind' ? <Wind/> : null}
           {icon === 'cloudy' ? <Cloudy/> : null}
           {icon === 'rain' ? <Rainy/> : null}
-          {icon === 'Fog' ? <Fog/> : null}
+          {icon === 'fog' ? <Fog/> : null}
       </Icon>
     </IconWrapper>
   )

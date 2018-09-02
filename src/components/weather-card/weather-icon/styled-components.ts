@@ -1,4 +1,3 @@
-import Posed from 'react-pose';
 import Styled from 'styled-components';
 
 export const IconWrapper =  Styled.div`
@@ -11,21 +10,11 @@ export const IconWrapper =  Styled.div`
   margin: 1.25rem 0;
 `;
 
-export const PosedIcon = Posed.i({
-  close: {
-    scale: 0,
-  },
-  open: {
-    delay: 300,
-    scale: 1,
-  },
-})
-
-export const Icon = Styled(PosedIcon)`
+export const Icon = Styled.i`
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 5rem;
+  width: 6rem;
   position: relative;
-  height: 5rem;
+  height: 6rem;
 `;
