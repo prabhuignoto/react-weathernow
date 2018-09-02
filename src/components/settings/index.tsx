@@ -1,6 +1,7 @@
 import *  as React from 'react';
-
+import SettingsSVG from './assets/cog.svg';
 import {
+  IconWrapper,
   Label,
   List,
   ListItem,
@@ -51,7 +52,9 @@ function handler(show: () => void) {
 const Settings: React.SFC<ISettings> = ({ clearRecentItems, setAsDefault, showMenu, show, onRef, hideMenu}) => {
   return (
     <Wrapper onClick={handler(showMenu)}>
-      {/* <Icon /> */}
+      <IconWrapper>
+        <SettingsSVG />
+      </IconWrapper>
       <Label>Settings</Label>
       <ListWrapper tabIndex={0} onBlur={hideMenu} innerRef={onRef}>
         {show ? <List className="settings-list" pose="open" initialPose="close">

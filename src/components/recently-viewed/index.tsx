@@ -2,7 +2,8 @@ import * as React from 'react';
 import { Fragment } from "react";
 import { IRecentItem, IRecentlyViewed} from '../../models/view/IRecentlyViewed'
 import { ILocation } from '../../types';
-import { Label, List, ListItemWrapper, Wrapper} from './styles';
+import HistorySVG from './assets/history.svg';
+import { IconWrapper, Label, List, ListItemWrapper, Wrapper} from './styles';
 
 const onSelectHandler = function _onSelectHandler(onSelect:(location:ILocation, name: string) => void, location: ILocation, name: string) {
   return function oSelectHandler(ev: React.MouseEvent<HTMLLIElement>) {
@@ -38,7 +39,9 @@ const RecentlyViewed: React.SFC<IRecentlyViewed> = ({ items, onSelect, showMenu,
       <Wrapper
         onClick={handler(showMenu)}
         className={`${items.length < 1 ? 'disabled' : ''}`}>
-        {/* <Icon /> */}
+        <IconWrapper>
+          <HistorySVG />
+        </IconWrapper>
         <Label>Recently Viewed</Label>
         <div 
           ref={onRef}

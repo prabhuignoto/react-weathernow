@@ -1,38 +1,51 @@
-import 'bulma/css/bulma.css';
-import * as React from 'react';
-import AutoSuggestCity from '../../containers/autosuggest-city';
-import AutoSuggestCountry from '../../containers/autosuggest-country';
-import CurrentlyWeather from '../../containers/currently-weather';
-import DailyWeather from '../../containers/daily-weather';
-import GeoLocation from '../../containers/geolocation';
+import "bulma/css/bulma.css";
+import * as React from "react";
+import AutoSuggestCity from "../../containers/autosuggest-city";
+import AutoSuggestCountry from "../../containers/autosuggest-country";
+import CurrentlyWeather from "../../containers/currently-weather";
+import DailyWeather from "../../containers/daily-weather";
+import GeoLocation from "../../containers/geolocation";
+import Geolocation from "../../containers/geolocation";
 import RecentlyViewed from "../../containers/recently-viewed";
-import Settings from '../../containers/settings';
-import ToggleWeather from '../../containers/toggle-weather';
-import {Mode} from '../../enums/mode';
-import IHome from '../../models/view/IHome';
-import { Footer } from '../footer/footer';
+import Settings from "../../containers/settings";
+import ToggleWeather from "../../containers/toggle-weather";
+import { Mode } from "../../enums/mode";
+import IHome from "../../models/view/IHome";
+import { Footer } from "../footer/footer";
 import Loader from "../loader-icon";
-import AppLogo from './assets/umbrella.svg';
-import { 
-  Appheader, AppIcon, AppTitle, AutoSuggestWrapper,
-  HomePage, SearchBar, ToggleWrapper, WeatherWrapper
-} from './styles';
+import AppLogo from "./assets/umbrella.svg";
+import {
+  Appheader,
+  AppIcon,
+  AppTitle,
+  AutoSuggestWrapper,
+  HomePage,
+  SearchBar,
+  ToggleWrapper,
+  WeatherWrapper
+} from "./styles";
 
-const Home: React.SFC<IHome> = ({mode , isForecastLoading}) => (
+const Home: React.SFC<IHome> = ({ mode, isForecastLoading }) => (
   <HomePage>
     <Appheader className="columns is-multiline">
-      <div className="column">
-        <AppTitle>
-          <AppIcon><AppLogo/></AppIcon>
-          Weather Now
-        </AppTitle>
+      <div className="column is-12-mobile is-4-desktop">
+        <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+          <AppTitle>
+            <AppIcon className="is-hidden-mobile">
+              <AppLogo />
+            </AppIcon>
+            Weather Now
+          </AppTitle>
+          <Geolocation />
+        </div>
       </div>
-      <div className="column is-3-desktop is-12-mobile">
-        <div className="columns is-multiline is-gapless">
-          <div className="column is-6-mobile">
+      <div className="column is-hidden-touch is-5-desktop"/>
+      <div className="column is-3-desktop is-4-tablet is-12-mobile">
+        <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+          <div style={{flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
             <RecentlyViewed />
           </div>
-          <div className="column is-6-mobile">
+          <div style={{flex:1, display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
             <Settings />
           </div>
         </div>
@@ -57,9 +70,9 @@ const Home: React.SFC<IHome> = ({mode , isForecastLoading}) => (
     </SearchBar>
 
     <WeatherWrapper className="columns is-centered is-multiline">
-      { mode === Mode.daily_forecast ? <DailyWeather /> : <CurrentlyWeather />}
+      {mode === Mode.daily_forecast ? <DailyWeather /> : <CurrentlyWeather />}
     </WeatherWrapper>
-    { isForecastLoading ? <Loader /> : null }
+    {isForecastLoading ? <Loader /> : null}
     <Footer />
   </HomePage>
 );

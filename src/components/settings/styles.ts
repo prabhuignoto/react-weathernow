@@ -1,26 +1,27 @@
 import Posed from 'react-pose';
 import Styled from 'styled-components';
 
-const PosedWrapper = Posed.div({
-  init: { scale: 1 },
-  press: { scale: 0.95 },
-  pressable: true,
-})
+export const IconWrapper = Styled.div`
+  position: relative;
+  height: 1.25rem;
+  width: 1.25rem;
+  margin-right: 0.25rem;
+`;
 
-const Wrapper = Styled(PosedWrapper)`
-  align-items: center;
+const Wrapper = Styled.div`
   cursor: pointer;
-  display: flex;
   font-family: Open Sans, Arial, sans-serif;
   font-size: 1rem;
-  height: 100%;
   justify-content: center;
   position: relative;
-  color: #fff;
+  color: rgba(201,173,167,1);
   font-family: Open Sans, arial, sans-serif;
   padding: 1rem;
   outline: none;
   user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
 const Label = Styled.div`
@@ -38,8 +39,7 @@ const Icon = Styled.i`
 const ListWrapper = Styled.div`
   position: absolute;
   right: 0;
-  top: 45px;
-  width: 100%;
+  top: 3rem;  
   z-index: 50;
   margin-left: auto;
   margin-right: auto;
@@ -64,6 +64,7 @@ const List = Styled(PosedList)`
   padding: 0;
   border-radius: 2px;
   border: 1px solid rgba(154, 140, 152, 0.7);
+  z-index: 999;
 `;
 
 const ListItem = Styled.li`

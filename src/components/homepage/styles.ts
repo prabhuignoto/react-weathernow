@@ -69,17 +69,17 @@ const AppTitle = Styled.div`
   font-family: Open Sans, Arial, sans-serif;
   font-weight: 500;
   color: #fff;
-  margin-left: 1px;
+  margin-left: 1rem;
   position: relative;
   display: flex;
   align-items: center;
 `;
 
 const AppIcon = Styled.i`
-  width: 3rem;
-  height: 3rem;
-  margin: 1rem;
-  padding: 0.5rem;
+  width: 2rem;
+  height: 2rem;
+  margin: 0.5rem;
+  padding: 0.25rem;
   position: relative;
 `
 
