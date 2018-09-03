@@ -16,12 +16,17 @@ const Wrapper = Styled.div`
   position: relative;
   color: rgba(201,173,167,1);
   font-family: M PLUS Rounded 1c, arial, sans-serif;
-  padding: 1rem;
+  padding: 0.5rem;
   outline: none;
   user-select: none;
   display: flex;
   align-items: center;
   justify-content: center;
+  &:hover {
+    border-color: rgba(201,173,167,1);
+  }
+  border: 1px solid transparent;
+  border-radius: 2px;
 `;
 
 const Label = Styled.div`

@@ -10,7 +10,7 @@ export const IconWrapper = Styled.div`
 
 const Wrapper = Styled.div`
   position: relative;
-  padding: 1rem;
+  padding: 0.5rem;
   border-radius: 2px;
   color: rgba(201,173,167,1);
   white-space: nowrap;
@@ -23,6 +23,11 @@ const Wrapper = Styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  &:hover {
+    border-color: rgba(201,173,167,1);
+  }
+  border: 1px solid transparent;
+  border-radius: 2px;
 
   &.disabled {
     pointer-events: none;

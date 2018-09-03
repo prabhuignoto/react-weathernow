@@ -19,7 +19,7 @@ const SearchBar = Styled.div`
   width: 100%;
   flex-wrap: wrap;
   margin-bottom: auto;
-  padding: 2px 15px;
+  padding: 0.5rem 0.25rem;
 `;
 
 const WeatherWrapper = Styled.div`

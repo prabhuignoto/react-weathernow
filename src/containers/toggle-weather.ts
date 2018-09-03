@@ -46,7 +46,7 @@ export default compose(
   connect(null, mapDispatchToProps),
   withStateHandlers<IToggleState, IStateHandlers<IToggleState>>(initialState, stateHandlers),
   defaultProps({
-    leftSwitchLabel: 'Current Weather',
-    rightSwitchLabel: 'Daily Forecast'
+    leftSwitchLabel: 'Current',
+    rightSwitchLabel: 'Forecast'
   })
 )(ToggleSwitch);

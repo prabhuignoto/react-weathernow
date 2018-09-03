@@ -4,7 +4,6 @@ import AutoSuggestCity from "../../containers/autosuggest-city";
 import AutoSuggestCountry from "../../containers/autosuggest-country";
 import CurrentlyWeather from "../../containers/currently-weather";
 import DailyWeather from "../../containers/daily-weather";
-import GeoLocation from "../../containers/geolocation";
 import Geolocation from "../../containers/geolocation";
 import RecentlyViewed from "../../containers/recently-viewed";
 import Settings from "../../containers/settings";
@@ -24,6 +23,7 @@ import {
   ToggleWrapper,
   WeatherWrapper
 } from "./styles";
+import Welcome from "../welcome/welcome";
 
 const Home: React.SFC<IHome> = ({ mode, isForecastLoading }) => (
   <HomePage>
@@ -71,7 +71,7 @@ const Home: React.SFC<IHome> = ({ mode, isForecastLoading }) => (
         </AutoSuggestWrapper>
       </div>
     </SearchBar>
-
+    <Welcome />
     <WeatherWrapper className="columns is-centered is-multiline">
       {mode === Mode.daily_forecast ? <DailyWeather /> : <CurrentlyWeather />}
     </WeatherWrapper>
