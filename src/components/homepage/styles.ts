@@ -25,13 +25,12 @@ const SearchBar = Styled.div`
 const WeatherWrapper = Styled.div`
   width: 100%;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  /* background: #1C1C31; */
   min-height: 80vh;
   margin-top: 0.1rem;
   margin-bottom: 1rem;
-  padding-top: 1rem;
+  padding-top: 0.5rem;
 `;
 
 const ToggleWrapper = Styled.div`

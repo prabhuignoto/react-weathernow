@@ -9,16 +9,14 @@ const DailyWeather: React.SFC<IDailyWeather> = ({
   isForecastLoading
 }) => {
   return (
-    <div className="container">
-      <DailyWeatherWrapper
-        className="columns is-centered is-multiline"
-        style={{ width: "100%" }}
-      >
-          {data.map(item => (
-            <WeatherCard {...item} key={item.date.unixTimeStamp} />
-          ))}
-      </DailyWeatherWrapper>
-    </div>
+    <DailyWeatherWrapper
+      className="columns is-centered is-multiline"
+      style={{ width: "100%" }}
+    >
+      {data.map(item => (
+        <WeatherCard {...item} key={item.date.unixTimeStamp} />
+      ))}
+    </DailyWeatherWrapper>
   );
 };
 

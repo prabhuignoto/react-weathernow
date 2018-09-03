@@ -28,7 +28,7 @@ import Welcome from "../welcome/welcome";
 const Home: React.SFC<IHome> = ({ mode, isForecastLoading }) => (
   <HomePage>
     <Appheader className="columns is-multiline">
-      <div className="column is-12-mobile is-4-desktop is-6-tablet">
+      <div className="column is-12-mobile is-5-desktop is-12-tablet">
         <div style={{display: 'flex', alignItems: 'center', justifyContent: 'flex-start'}}>
           <AppTitle>
             <AppIcon>
@@ -36,12 +36,12 @@ const Home: React.SFC<IHome> = ({ mode, isForecastLoading }) => (
             </AppIcon>
             Weather Now
           </AppTitle>
-          <div style={{marginLeft: 'auto'}}>
+          <div style={{marginRight: 'auto'}}>
             <Geolocation />
           </div>
         </div>
       </div>
-      <div className="column is-hidden-mobile is-5-desktop"/>
+      <div className="column is-hidden-mobile is-4-desktop"/>
       <div className="column is-3-desktop is-12-tablet is-12-mobile">
         <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
           <div style={{flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
@@ -72,7 +72,7 @@ const Home: React.SFC<IHome> = ({ mode, isForecastLoading }) => (
       </div>
     </SearchBar>
     <Welcome />
-    <WeatherWrapper className="columns is-centered is-multiline">
+    <WeatherWrapper>
       {mode === Mode.daily_forecast ? <DailyWeather /> : <CurrentlyWeather />}
     </WeatherWrapper>
     {isForecastLoading ? <Loader /> : null}

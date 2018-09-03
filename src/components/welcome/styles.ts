@@ -4,9 +4,10 @@ export const Wrapper = Styled.div`
   display: flex;
   padding: 1rem;
   flex-direction: column;
-  margin: 0 auto;
-  width: 95%;
+  /* margin: 0 auto; */
+  width: 98%;
   background: rgb(28,28,49);
+  /* background: linear-gradient(90deg, rgba(28,28,49,1) 0%, rgba(201, 173, 167, 0.95) 50%); */
   border-radius: 4px;
 `;
 
