@@ -22,7 +22,7 @@ const WeatherCard: React.SFC<IWeatherCard> = ({
   sciDataOpen,
   temperature
 }) => (
-  <Wrapper className="column is-10-mobile is-5-tablet is-one-third-desktop is-one-quarter-widescreen" pose="enter" initialPose="exit">
+  <Wrapper className="column is-10-mobile is-5-tablet is-4-desktop is-3-fullhd" pose="enter" initialPose="exit">
     <Container>
       <Date {...date}/>
       <WeatherIcon  icon={icon} />
