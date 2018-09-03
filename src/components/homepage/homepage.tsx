@@ -28,10 +28,10 @@ import Welcome from "../welcome/welcome";
 const Home: React.SFC<IHome> = ({ mode, isForecastLoading }) => (
   <HomePage>
     <Appheader className="columns is-multiline">
-      <div className="column is-12-mobile is-5-desktop is-12-tablet">
+      <div className="column is-12-mobile is-5-desktop is-7-tablet">
         <div style={{display: 'flex', alignItems: 'center', justifyContent: 'flex-start'}}>
           <AppTitle>
-            <AppIcon>
+            <AppIcon className="is-hidden-mobile">
               <AppLogo />
             </AppIcon>
             Weather Now
@@ -41,8 +41,8 @@ const Home: React.SFC<IHome> = ({ mode, isForecastLoading }) => (
           </div>
         </div>
       </div>
-      <div className="column is-hidden-mobile is-4-desktop"/>
-      <div className="column is-3-desktop is-12-tablet is-12-mobile">
+      <div className="column is-hidden-mobile is-hidden-tablet is-4-desktop"/>
+      <div className="column is-3-desktop is-12-mobile" style={{marginLeft: 'auto'}}>
         <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
           <div style={{flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
             <RecentlyViewed />
