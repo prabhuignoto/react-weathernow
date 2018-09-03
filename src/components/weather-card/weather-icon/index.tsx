@@ -12,7 +12,7 @@ import {Icon, IconWrapper} from './styled-components';
 const WeatherIcon: React.SFC<IWeatherIcon> = ({ icon }) => {
   return (
     <IconWrapper>
-      <Icon className={`icon ${icon}`} pose="open" initialPose="close">
+      <Icon className={`icon ${icon}`}>
           {icon === 'clear-day' ? <ClearDay/> : null}
           {icon === 'partly-cloudy-day' ? <PartlyCloudy/> : null}
           {icon === 'partly-cloudy-night' ? <PartlyCloudyNight/> : null}
