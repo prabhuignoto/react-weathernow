@@ -1,0 +1,39 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  labels:
+    stage: production
+  name: mongo-deployment
+spec:
+  replicas: 1
+  strategy:
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        name: mongo-pod
+        stage: production
+    spec:
+      containers:
+      - image: mongo:latest
+        imagePullPolicy: Always
+        name: mongo
+        ports:
+        - containerPort: 27017
+          name: mongo-port
+          protocol: TCP
+        resources:
+          limits:
+            cpu: 500m
+            memory: 500M
+          requests:
+            cpu: 250m
+            memory: 400M
+      restartPolicy: Always
+      volumes:
+      - name: mongo-volume
+        persistentVolumeClaim:
+          claimName: mongo-volume-claim

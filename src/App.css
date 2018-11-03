@@ -27,6 +27,6 @@
   to { transform: rotate(360deg); }
 }
 
-body, #root, html {
-  /* height: 100%; */
+body {
+  font-family: Ubuntu;
 }

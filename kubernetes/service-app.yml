@@ -1,0 +1,18 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: app-service
+  labels:
+    stage: production
+spec:
+  selector:
+    stage: production
+    name: webapp
+  type: LoadBalancer
+  ports:
+    - name: app-service-port
+      port: 80
+      targetPort: 80
+    - name: app-secure-port
+      port: 443
+      targetPort: 443

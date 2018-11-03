@@ -1,0 +1,37 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: deployment-weatherservice
+  labels:
+    stage: production
+spec:
+  replicas: 1
+  strategy:
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        stage: production
+        name: weatherservice-pod
+    spec:
+      containers:
+        - image: asia.gcr.io/inbound-trilogy-217503/weathersvc-prod:latest
+          imagePullPolicy: "Always"
+          name: weatherservice
+          resources:
+            limits:
+              cpu: "0.4"
+              memory: "500M"
+            requests:
+              cpu: "0.25"
+              memory: "400"
+          env:
+            - name: NODE_ENV
+              value: production
+          ports:
+            - containerPort: 443
+              name: secure-svc-port
+      restartPolicy: Always

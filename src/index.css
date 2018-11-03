@@ -2,10 +2,6 @@ body {
   margin: 0;
   padding: 0;
   background: #000;
-  /* background: rgba(0,0,0,0.9); */
-  /* background: rgba(74,78,105,1); */
-
-  /* background: linear-gradient(45deg, rgba(28,28,49,1) 0%, rgba(74,78,105,1) 100%);; */
 }
 
 svg {
