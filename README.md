@@ -1,7 +1,7 @@
 # WeatherNow
 
 <!-- [![NPM Version][npm-image]][npm-url] -->
-[![Build Status][travis-image]][travis-url]
+<!-- [![Build Status][travis-image]][travis-url] -->
 <!-- [![Downloads Stats][npm-downloads]][npm-url] -->
 
 WeatherNow is a modern weather app with very strong foundations. Powered by the Darkweather API, the app provides accurate forecast and current weather conditions in realtime.
@@ -42,5 +42,3 @@ Distributed under the MIT license. See ``LICENSE`` for more information.
 
 <!-- Markdown link & img dfn's -->
 [wiki]: https://github.com/yourname/yourproject/wiki
-[travis-image]: https://travis-ci.org/prabhuignoto/react-weathernow.svg?branch=master
-[travis-url]: https://travis-ci.org/prabhuignoto/react-weathernow
